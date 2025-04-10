@@ -1,0 +1,24 @@
+services:
+    database:
+        image: postgres:16-alpine
+        container_name: dont-sleepy_database
+        ports:
+            - 5432:5432
+        environment:
+            - POSTGRES_DB=dont-sleepy
+            - POSTGRES_USER=dont-sleepy
+            - POSTGRES_PASSWORD=12345
+        volumes:
+            - dont-sleepy_data:/var/lib/postgresql/data
+        networks:
+            - dont-sleepy_net
+
+networks:
+    dont-sleepy_net:
+        driver: bridge
+
+volumes:
+    dont-sleepy_data:
+        driver: local
+    dont-sleepy_s3:
+        driver: local
