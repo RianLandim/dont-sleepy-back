@@ -31,7 +31,13 @@ export class SleepService {
     }
 
     async getSleepById(id: number, userId: number): Promise<Sleep | null> {
-        return this.prisma.sleep.findFirst({ where: { id, userId } });
+        const numericId = Number(id);
+        if (isNaN(numericId) || numericId <= 0) return null;
+        const sleep = await this.prisma.sleep.findUnique({
+            where: { id: numericId },
+        });
+        if (!sleep || sleep.userId !== Number(userId)) return null;
+        return sleep;
     }
 
     async updateSleep(
@@ -39,7 +45,9 @@ export class SleepService {
         userId: number,
         data: { start?: Date; end?: Date },
     ): Promise<Sleep | null> {
-        const sleep = await this.getSleepById(id, userId);
+        const numericId = Number(id);
+        if (isNaN(numericId) || numericId <= 0) return null;
+        const sleep = await this.getSleepById(numericId, userId);
         if (!sleep) return null;
         const startDate = data.start ? new Date(data.start) : sleep.start;
         const endDate = data.end ? new Date(data.end) : sleep.end;
@@ -47,15 +55,17 @@ export class SleepService {
             (endDate.getTime() - startDate.getTime()) / 1000,
         );
         return this.prisma.sleep.update({
-            where: { id },
+            where: { id: numericId },
             data: { start: startDate, end: endDate, duration },
         });
     }
 
     async deleteSleep(id: number, userId: number): Promise<Sleep | null> {
-        const sleep = await this.getSleepById(id, userId);
+        const numericId = Number(id);
+        if (isNaN(numericId) || numericId <= 0) return null;
+        const sleep = await this.getSleepById(numericId, userId);
         if (!sleep) return null;
-        return this.prisma.sleep.delete({ where: { id } });
+        return this.prisma.sleep.delete({ where: { id: numericId } });
     }
 
     async countUserSleepsInPeriod(

@@ -9,6 +9,7 @@ import {
     UseGuards,
     Request,
     Query,
+    NotFoundException,
 } from '@nestjs/common';
 import { SleepService } from './sleep.service';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
@@ -36,7 +37,9 @@ export class SleepController {
     @Get(':id')
     async getSleepById(@Param('id') id: string, @Request() req) {
         const userId = Number(req.user.userId);
-        return this.sleepService.getSleepById(Number(id), userId);
+        const sleep = await this.sleepService.getSleepById(Number(id), userId);
+        if (!sleep) throw new NotFoundException('Soneca não encontrada');
+        return sleep;
     }
 
     @Patch(':id')
