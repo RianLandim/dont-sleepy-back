@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model Post
+ * Model sleep
  * 
  */
-export type Post = $Result.DefaultSelection<Prisma.$PostPayload>
+export type sleep = $Result.DefaultSelection<Prisma.$sleepPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -160,14 +160,14 @@ export class PrismaClient<
   get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.post`: Exposes CRUD operations for the **Post** model.
+   * `prisma.sleep`: Exposes CRUD operations for the **sleep** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Posts
-    * const posts = await prisma.post.findMany()
+    * // Fetch zero or more Sleeps
+    * const sleeps = await prisma.sleep.findMany()
     * ```
     */
-  get post(): Prisma.PostDelegate<ExtArgs, ClientOptions>;
+  get sleep(): Prisma.sleepDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +609,7 @@ export namespace Prisma {
 
   export const ModelName: {
     User: 'User',
-    Post: 'Post'
+    sleep: 'sleep'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,7 +628,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "post"
+      modelProps: "user" | "sleep"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -706,77 +706,77 @@ export namespace Prisma {
           }
         }
       }
-      Post: {
-        payload: Prisma.$PostPayload<ExtArgs>
-        fields: Prisma.PostFieldRefs
+      sleep: {
+        payload: Prisma.$sleepPayload<ExtArgs>
+        fields: Prisma.sleepFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.PostFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload> | null
+            args: Prisma.sleepFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.PostFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.sleepFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
           }
           findFirst: {
-            args: Prisma.PostFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload> | null
+            args: Prisma.sleepFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.PostFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.sleepFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
           }
           findMany: {
-            args: Prisma.PostFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>[]
+            args: Prisma.sleepFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>[]
           }
           create: {
-            args: Prisma.PostCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.sleepCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
           }
           createMany: {
-            args: Prisma.PostCreateManyArgs<ExtArgs>
+            args: Prisma.sleepCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.PostCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>[]
+            args: Prisma.sleepCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>[]
           }
           delete: {
-            args: Prisma.PostDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.sleepDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
           }
           update: {
-            args: Prisma.PostUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.sleepUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
           }
           deleteMany: {
-            args: Prisma.PostDeleteManyArgs<ExtArgs>
+            args: Prisma.sleepDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.PostUpdateManyArgs<ExtArgs>
+            args: Prisma.sleepUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.PostUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>[]
+            args: Prisma.sleepUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>[]
           }
           upsert: {
-            args: Prisma.PostUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PostPayload>
+            args: Prisma.sleepUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
           }
           aggregate: {
-            args: Prisma.PostAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregatePost>
+            args: Prisma.SleepAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateSleep>
           }
           groupBy: {
-            args: Prisma.PostGroupByArgs<ExtArgs>
-            result: $Utils.Optional<PostGroupByOutputType>[]
+            args: Prisma.sleepGroupByArgs<ExtArgs>
+            result: $Utils.Optional<SleepGroupByOutputType>[]
           }
           count: {
-            args: Prisma.PostCountArgs<ExtArgs>
-            result: $Utils.Optional<PostCountAggregateOutputType> | number
+            args: Prisma.sleepCountArgs<ExtArgs>
+            result: $Utils.Optional<SleepCountAggregateOutputType> | number
           }
         }
       }
@@ -865,7 +865,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     user?: UserOmit
-    post?: PostOmit
+    sleep?: sleepOmit
   }
 
   /* Types for Logging */
@@ -960,11 +960,11 @@ export namespace Prisma {
    */
 
   export type UserCountOutputType = {
-    posts: number
+    sleep: number
   }
 
   export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    posts?: boolean | UserCountOutputTypeCountPostsArgs
+    sleep?: boolean | UserCountOutputTypeCountSleepArgs
   }
 
   // Custom InputTypes
@@ -981,8 +981,8 @@ export namespace Prisma {
   /**
    * UserCountOutputType without action
    */
-  export type UserCountOutputTypeCountPostsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: PostWhereInput
+  export type UserCountOutputTypeCountSleepArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: sleepWhereInput
   }
 
 
@@ -1014,18 +1014,30 @@ export namespace Prisma {
     id: number | null
     email: string | null
     name: string | null
+    password: string | null
+    birthDate: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type UserMaxAggregateOutputType = {
     id: number | null
     email: string | null
     name: string | null
+    password: string | null
+    birthDate: Date | null
+    createdAt: Date | null
+    updatedAt: Date | null
   }
 
   export type UserCountAggregateOutputType = {
     id: number
     email: number
     name: number
+    password: number
+    birthDate: number
+    createdAt: number
+    updatedAt: number
     _all: number
   }
 
@@ -1042,18 +1054,30 @@ export namespace Prisma {
     id?: true
     email?: true
     name?: true
+    password?: true
+    birthDate?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type UserMaxAggregateInputType = {
     id?: true
     email?: true
     name?: true
+    password?: true
+    birthDate?: true
+    createdAt?: true
+    updatedAt?: true
   }
 
   export type UserCountAggregateInputType = {
     id?: true
     email?: true
     name?: true
+    password?: true
+    birthDate?: true
+    createdAt?: true
+    updatedAt?: true
     _all?: true
   }
 
@@ -1146,7 +1170,11 @@ export namespace Prisma {
   export type UserGroupByOutputType = {
     id: number
     email: string
-    name: string | null
+    name: string
+    password: string
+    birthDate: Date
+    createdAt: Date
+    updatedAt: Date
     _count: UserCountAggregateOutputType | null
     _avg: UserAvgAggregateOutputType | null
     _sum: UserSumAggregateOutputType | null
@@ -1172,7 +1200,11 @@ export namespace Prisma {
     id?: boolean
     email?: boolean
     name?: boolean
-    posts?: boolean | User$postsArgs<ExtArgs>
+    password?: boolean
+    birthDate?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
+    sleep?: boolean | User$sleepArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["user"]>
 
@@ -1180,23 +1212,35 @@ export namespace Prisma {
     id?: boolean
     email?: boolean
     name?: boolean
+    password?: boolean
+    birthDate?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     email?: boolean
     name?: boolean
+    password?: boolean
+    birthDate?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
     id?: boolean
     email?: boolean
     name?: boolean
+    password?: boolean
+    birthDate?: boolean
+    createdAt?: boolean
+    updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "birthDate" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    posts?: boolean | User$postsArgs<ExtArgs>
+    sleep?: boolean | User$sleepArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -1205,12 +1249,16 @@ export namespace Prisma {
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {
-      posts: Prisma.$PostPayload<ExtArgs>[]
+      sleep: Prisma.$sleepPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       email: string
-      name: string | null
+      name: string
+      password: string
+      birthDate: Date
+      createdAt: Date
+      updatedAt: Date
     }, ExtArgs["result"]["user"]>
     composites: {}
   }
@@ -1605,7 +1653,7 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    posts<T extends User$postsArgs<ExtArgs> = {}>(args?: Subset<T, User$postsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    sleep<T extends User$sleepArgs<ExtArgs> = {}>(args?: Subset<T, User$sleepArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1638,6 +1686,10 @@ export namespace Prisma {
     readonly id: FieldRef<"User", 'Int'>
     readonly email: FieldRef<"User", 'String'>
     readonly name: FieldRef<"User", 'String'>
+    readonly password: FieldRef<"User", 'String'>
+    readonly birthDate: FieldRef<"User", 'DateTime'>
+    readonly createdAt: FieldRef<"User", 'DateTime'>
+    readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
     
 
@@ -2026,27 +2078,27 @@ export namespace Prisma {
   }
 
   /**
-   * User.posts
+   * User.sleep
    */
-  export type User$postsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type User$sleepArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
-    where?: PostWhereInput
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
-    cursor?: PostWhereUniqueInput
+    include?: sleepInclude<ExtArgs> | null
+    where?: sleepWhereInput
+    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
+    cursor?: sleepWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
@@ -2069,388 +2121,392 @@ export namespace Prisma {
 
 
   /**
-   * Model Post
+   * Model sleep
    */
 
-  export type AggregatePost = {
-    _count: PostCountAggregateOutputType | null
-    _avg: PostAvgAggregateOutputType | null
-    _sum: PostSumAggregateOutputType | null
-    _min: PostMinAggregateOutputType | null
-    _max: PostMaxAggregateOutputType | null
+  export type AggregateSleep = {
+    _count: SleepCountAggregateOutputType | null
+    _avg: SleepAvgAggregateOutputType | null
+    _sum: SleepSumAggregateOutputType | null
+    _min: SleepMinAggregateOutputType | null
+    _max: SleepMaxAggregateOutputType | null
   }
 
-  export type PostAvgAggregateOutputType = {
+  export type SleepAvgAggregateOutputType = {
     id: number | null
-    authorId: number | null
+    duration: number | null
+    userId: number | null
   }
 
-  export type PostSumAggregateOutputType = {
+  export type SleepSumAggregateOutputType = {
     id: number | null
-    authorId: number | null
+    duration: number | null
+    userId: number | null
   }
 
-  export type PostMinAggregateOutputType = {
+  export type SleepMinAggregateOutputType = {
     id: number | null
-    title: string | null
-    content: string | null
-    published: boolean | null
-    authorId: number | null
+    start: Date | null
+    end: Date | null
+    duration: number | null
+    userId: number | null
   }
 
-  export type PostMaxAggregateOutputType = {
+  export type SleepMaxAggregateOutputType = {
     id: number | null
-    title: string | null
-    content: string | null
-    published: boolean | null
-    authorId: number | null
+    start: Date | null
+    end: Date | null
+    duration: number | null
+    userId: number | null
   }
 
-  export type PostCountAggregateOutputType = {
+  export type SleepCountAggregateOutputType = {
     id: number
-    title: number
-    content: number
-    published: number
-    authorId: number
+    start: number
+    end: number
+    duration: number
+    userId: number
     _all: number
   }
 
 
-  export type PostAvgAggregateInputType = {
+  export type SleepAvgAggregateInputType = {
     id?: true
-    authorId?: true
+    duration?: true
+    userId?: true
   }
 
-  export type PostSumAggregateInputType = {
+  export type SleepSumAggregateInputType = {
     id?: true
-    authorId?: true
+    duration?: true
+    userId?: true
   }
 
-  export type PostMinAggregateInputType = {
+  export type SleepMinAggregateInputType = {
     id?: true
-    title?: true
-    content?: true
-    published?: true
-    authorId?: true
+    start?: true
+    end?: true
+    duration?: true
+    userId?: true
   }
 
-  export type PostMaxAggregateInputType = {
+  export type SleepMaxAggregateInputType = {
     id?: true
-    title?: true
-    content?: true
-    published?: true
-    authorId?: true
+    start?: true
+    end?: true
+    duration?: true
+    userId?: true
   }
 
-  export type PostCountAggregateInputType = {
+  export type SleepCountAggregateInputType = {
     id?: true
-    title?: true
-    content?: true
-    published?: true
-    authorId?: true
+    start?: true
+    end?: true
+    duration?: true
+    userId?: true
     _all?: true
   }
 
-  export type PostAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Post to aggregate.
+     * Filter which sleep to aggregate.
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of sleeps to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: sleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` sleeps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Posts
+     * Count returned sleeps
     **/
-    _count?: true | PostCountAggregateInputType
+    _count?: true | SleepCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: PostAvgAggregateInputType
+    _avg?: SleepAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: PostSumAggregateInputType
+    _sum?: SleepSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: PostMinAggregateInputType
+    _min?: SleepMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: PostMaxAggregateInputType
+    _max?: SleepMaxAggregateInputType
   }
 
-  export type GetPostAggregateType<T extends PostAggregateArgs> = {
-        [P in keyof T & keyof AggregatePost]: P extends '_count' | 'count'
+  export type GetSleepAggregateType<T extends SleepAggregateArgs> = {
+        [P in keyof T & keyof AggregateSleep]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregatePost[P]>
-      : GetScalarType<T[P], AggregatePost[P]>
+        : GetScalarType<T[P], AggregateSleep[P]>
+      : GetScalarType<T[P], AggregateSleep[P]>
   }
 
 
 
 
-  export type PostGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: PostWhereInput
-    orderBy?: PostOrderByWithAggregationInput | PostOrderByWithAggregationInput[]
-    by: PostScalarFieldEnum[] | PostScalarFieldEnum
-    having?: PostScalarWhereWithAggregatesInput
+  export type sleepGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: sleepWhereInput
+    orderBy?: sleepOrderByWithAggregationInput | sleepOrderByWithAggregationInput[]
+    by: SleepScalarFieldEnum[] | SleepScalarFieldEnum
+    having?: sleepScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: PostCountAggregateInputType | true
-    _avg?: PostAvgAggregateInputType
-    _sum?: PostSumAggregateInputType
-    _min?: PostMinAggregateInputType
-    _max?: PostMaxAggregateInputType
+    _count?: SleepCountAggregateInputType | true
+    _avg?: SleepAvgAggregateInputType
+    _sum?: SleepSumAggregateInputType
+    _min?: SleepMinAggregateInputType
+    _max?: SleepMaxAggregateInputType
   }
 
-  export type PostGroupByOutputType = {
+  export type SleepGroupByOutputType = {
     id: number
-    title: string
-    content: string | null
-    published: boolean | null
-    authorId: number | null
-    _count: PostCountAggregateOutputType | null
-    _avg: PostAvgAggregateOutputType | null
-    _sum: PostSumAggregateOutputType | null
-    _min: PostMinAggregateOutputType | null
-    _max: PostMaxAggregateOutputType | null
+    start: Date
+    end: Date
+    duration: number
+    userId: number
+    _count: SleepCountAggregateOutputType | null
+    _avg: SleepAvgAggregateOutputType | null
+    _sum: SleepSumAggregateOutputType | null
+    _min: SleepMinAggregateOutputType | null
+    _max: SleepMaxAggregateOutputType | null
   }
 
-  type GetPostGroupByPayload<T extends PostGroupByArgs> = Prisma.PrismaPromise<
+  type GetSleepGroupByPayload<T extends sleepGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<PostGroupByOutputType, T['by']> &
+      PickEnumerable<SleepGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof PostGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof SleepGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], PostGroupByOutputType[P]>
-            : GetScalarType<T[P], PostGroupByOutputType[P]>
+              : GetScalarType<T[P], SleepGroupByOutputType[P]>
+            : GetScalarType<T[P], SleepGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type PostSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type sleepSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    content?: boolean
-    published?: boolean
-    authorId?: boolean
-    author?: boolean | Post$authorArgs<ExtArgs>
-  }, ExtArgs["result"]["post"]>
+    start?: boolean
+    end?: boolean
+    duration?: boolean
+    userId?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["sleep"]>
 
-  export type PostSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type sleepSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    content?: boolean
-    published?: boolean
-    authorId?: boolean
-    author?: boolean | Post$authorArgs<ExtArgs>
-  }, ExtArgs["result"]["post"]>
+    start?: boolean
+    end?: boolean
+    duration?: boolean
+    userId?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["sleep"]>
 
-  export type PostSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type sleepSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    title?: boolean
-    content?: boolean
-    published?: boolean
-    authorId?: boolean
-    author?: boolean | Post$authorArgs<ExtArgs>
-  }, ExtArgs["result"]["post"]>
+    start?: boolean
+    end?: boolean
+    duration?: boolean
+    userId?: boolean
+    user?: boolean | UserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["sleep"]>
 
-  export type PostSelectScalar = {
+  export type sleepSelectScalar = {
     id?: boolean
-    title?: boolean
-    content?: boolean
-    published?: boolean
-    authorId?: boolean
+    start?: boolean
+    end?: boolean
+    duration?: boolean
+    userId?: boolean
   }
 
-  export type PostOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "content" | "published" | "authorId", ExtArgs["result"]["post"]>
-  export type PostInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | Post$authorArgs<ExtArgs>
+  export type sleepOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "start" | "end" | "duration" | "userId", ExtArgs["result"]["sleep"]>
+  export type sleepInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }
-  export type PostIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | Post$authorArgs<ExtArgs>
+  export type sleepIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }
-  export type PostIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    author?: boolean | Post$authorArgs<ExtArgs>
+  export type sleepIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    user?: boolean | UserDefaultArgs<ExtArgs>
   }
 
-  export type $PostPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Post"
+  export type $sleepPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "sleep"
     objects: {
-      author: Prisma.$UserPayload<ExtArgs> | null
+      user: Prisma.$UserPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      title: string
-      content: string | null
-      published: boolean | null
-      authorId: number | null
-    }, ExtArgs["result"]["post"]>
+      start: Date
+      end: Date
+      duration: number
+      userId: number
+    }, ExtArgs["result"]["sleep"]>
     composites: {}
   }
 
-  type PostGetPayload<S extends boolean | null | undefined | PostDefaultArgs> = $Result.GetResult<Prisma.$PostPayload, S>
+  type sleepGetPayload<S extends boolean | null | undefined | sleepDefaultArgs> = $Result.GetResult<Prisma.$sleepPayload, S>
 
-  type PostCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<PostFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: PostCountAggregateInputType | true
+  type sleepCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<sleepFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: SleepCountAggregateInputType | true
     }
 
-  export interface PostDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Post'], meta: { name: 'Post' } }
+  export interface sleepDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['sleep'], meta: { name: 'sleep' } }
     /**
-     * Find zero or one Post that matches the filter.
-     * @param {PostFindUniqueArgs} args - Arguments to find a Post
+     * Find zero or one Sleep that matches the filter.
+     * @param {sleepFindUniqueArgs} args - Arguments to find a Sleep
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findUnique({
+     * // Get one Sleep
+     * const sleep = await prisma.sleep.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends PostFindUniqueArgs>(args: SelectSubset<T, PostFindUniqueArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends sleepFindUniqueArgs>(args: SelectSubset<T, sleepFindUniqueArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Post that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Sleep that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {PostFindUniqueOrThrowArgs} args - Arguments to find a Post
+     * @param {sleepFindUniqueOrThrowArgs} args - Arguments to find a Sleep
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findUniqueOrThrow({
+     * // Get one Sleep
+     * const sleep = await prisma.sleep.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends PostFindUniqueOrThrowArgs>(args: SelectSubset<T, PostFindUniqueOrThrowArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends sleepFindUniqueOrThrowArgs>(args: SelectSubset<T, sleepFindUniqueOrThrowArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Post that matches the filter.
+     * Find the first Sleep that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostFindFirstArgs} args - Arguments to find a Post
+     * @param {sleepFindFirstArgs} args - Arguments to find a Sleep
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findFirst({
+     * // Get one Sleep
+     * const sleep = await prisma.sleep.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends PostFindFirstArgs>(args?: SelectSubset<T, PostFindFirstArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends sleepFindFirstArgs>(args?: SelectSubset<T, sleepFindFirstArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Post that matches the filter or
+     * Find the first Sleep that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostFindFirstOrThrowArgs} args - Arguments to find a Post
+     * @param {sleepFindFirstOrThrowArgs} args - Arguments to find a Sleep
      * @example
-     * // Get one Post
-     * const post = await prisma.post.findFirstOrThrow({
+     * // Get one Sleep
+     * const sleep = await prisma.sleep.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends PostFindFirstOrThrowArgs>(args?: SelectSubset<T, PostFindFirstOrThrowArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends sleepFindFirstOrThrowArgs>(args?: SelectSubset<T, sleepFindFirstOrThrowArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Posts that matches the filter.
+     * Find zero or more Sleeps that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {sleepFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Posts
-     * const posts = await prisma.post.findMany()
+     * // Get all Sleeps
+     * const sleeps = await prisma.sleep.findMany()
      * 
-     * // Get first 10 Posts
-     * const posts = await prisma.post.findMany({ take: 10 })
+     * // Get first 10 Sleeps
+     * const sleeps = await prisma.sleep.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const postWithIdOnly = await prisma.post.findMany({ select: { id: true } })
+     * const sleepWithIdOnly = await prisma.sleep.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends PostFindManyArgs>(args?: SelectSubset<T, PostFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends sleepFindManyArgs>(args?: SelectSubset<T, sleepFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Post.
-     * @param {PostCreateArgs} args - Arguments to create a Post.
+     * Create a Sleep.
+     * @param {sleepCreateArgs} args - Arguments to create a Sleep.
      * @example
-     * // Create one Post
-     * const Post = await prisma.post.create({
+     * // Create one Sleep
+     * const Sleep = await prisma.sleep.create({
      *   data: {
-     *     // ... data to create a Post
+     *     // ... data to create a Sleep
      *   }
      * })
      * 
      */
-    create<T extends PostCreateArgs>(args: SelectSubset<T, PostCreateArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends sleepCreateArgs>(args: SelectSubset<T, sleepCreateArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Posts.
-     * @param {PostCreateManyArgs} args - Arguments to create many Posts.
+     * Create many Sleeps.
+     * @param {sleepCreateManyArgs} args - Arguments to create many Sleeps.
      * @example
-     * // Create many Posts
-     * const post = await prisma.post.createMany({
+     * // Create many Sleeps
+     * const sleep = await prisma.sleep.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends PostCreateManyArgs>(args?: SelectSubset<T, PostCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends sleepCreateManyArgs>(args?: SelectSubset<T, sleepCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Posts and returns the data saved in the database.
-     * @param {PostCreateManyAndReturnArgs} args - Arguments to create many Posts.
+     * Create many Sleeps and returns the data saved in the database.
+     * @param {sleepCreateManyAndReturnArgs} args - Arguments to create many Sleeps.
      * @example
-     * // Create many Posts
-     * const post = await prisma.post.createManyAndReturn({
+     * // Create many Sleeps
+     * const sleep = await prisma.sleep.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Posts and only return the `id`
-     * const postWithIdOnly = await prisma.post.createManyAndReturn({
+     * // Create many Sleeps and only return the `id`
+     * const sleepWithIdOnly = await prisma.sleep.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2460,28 +2516,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends PostCreateManyAndReturnArgs>(args?: SelectSubset<T, PostCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends sleepCreateManyAndReturnArgs>(args?: SelectSubset<T, sleepCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Post.
-     * @param {PostDeleteArgs} args - Arguments to delete one Post.
+     * Delete a Sleep.
+     * @param {sleepDeleteArgs} args - Arguments to delete one Sleep.
      * @example
-     * // Delete one Post
-     * const Post = await prisma.post.delete({
+     * // Delete one Sleep
+     * const Sleep = await prisma.sleep.delete({
      *   where: {
-     *     // ... filter to delete one Post
+     *     // ... filter to delete one Sleep
      *   }
      * })
      * 
      */
-    delete<T extends PostDeleteArgs>(args: SelectSubset<T, PostDeleteArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends sleepDeleteArgs>(args: SelectSubset<T, sleepDeleteArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Post.
-     * @param {PostUpdateArgs} args - Arguments to update one Post.
+     * Update one Sleep.
+     * @param {sleepUpdateArgs} args - Arguments to update one Sleep.
      * @example
-     * // Update one Post
-     * const post = await prisma.post.update({
+     * // Update one Sleep
+     * const sleep = await prisma.sleep.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2491,30 +2547,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends PostUpdateArgs>(args: SelectSubset<T, PostUpdateArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends sleepUpdateArgs>(args: SelectSubset<T, sleepUpdateArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Posts.
-     * @param {PostDeleteManyArgs} args - Arguments to filter Posts to delete.
+     * Delete zero or more Sleeps.
+     * @param {sleepDeleteManyArgs} args - Arguments to filter Sleeps to delete.
      * @example
-     * // Delete a few Posts
-     * const { count } = await prisma.post.deleteMany({
+     * // Delete a few Sleeps
+     * const { count } = await prisma.sleep.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends PostDeleteManyArgs>(args?: SelectSubset<T, PostDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends sleepDeleteManyArgs>(args?: SelectSubset<T, sleepDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Posts.
+     * Update zero or more Sleeps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {sleepUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Posts
-     * const post = await prisma.post.updateMany({
+     * // Update many Sleeps
+     * const sleep = await prisma.sleep.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2524,14 +2580,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends PostUpdateManyArgs>(args: SelectSubset<T, PostUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends sleepUpdateManyArgs>(args: SelectSubset<T, sleepUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Posts and returns the data updated in the database.
-     * @param {PostUpdateManyAndReturnArgs} args - Arguments to update many Posts.
+     * Update zero or more Sleeps and returns the data updated in the database.
+     * @param {sleepUpdateManyAndReturnArgs} args - Arguments to update many Sleeps.
      * @example
-     * // Update many Posts
-     * const post = await prisma.post.updateManyAndReturn({
+     * // Update many Sleeps
+     * const sleep = await prisma.sleep.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2540,8 +2596,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Posts and only return the `id`
-     * const postWithIdOnly = await prisma.post.updateManyAndReturn({
+     * // Update zero or more Sleeps and only return the `id`
+     * const sleepWithIdOnly = await prisma.sleep.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2554,56 +2610,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends PostUpdateManyAndReturnArgs>(args: SelectSubset<T, PostUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends sleepUpdateManyAndReturnArgs>(args: SelectSubset<T, sleepUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Post.
-     * @param {PostUpsertArgs} args - Arguments to update or create a Post.
+     * Create or update one Sleep.
+     * @param {sleepUpsertArgs} args - Arguments to update or create a Sleep.
      * @example
-     * // Update or create a Post
-     * const post = await prisma.post.upsert({
+     * // Update or create a Sleep
+     * const sleep = await prisma.sleep.upsert({
      *   create: {
-     *     // ... data to create a Post
+     *     // ... data to create a Sleep
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Post we want to update
+     *     // ... the filter for the Sleep we want to update
      *   }
      * })
      */
-    upsert<T extends PostUpsertArgs>(args: SelectSubset<T, PostUpsertArgs<ExtArgs>>): Prisma__PostClient<$Result.GetResult<Prisma.$PostPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends sleepUpsertArgs>(args: SelectSubset<T, sleepUpsertArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Posts.
+     * Count the number of Sleeps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostCountArgs} args - Arguments to filter Posts to count.
+     * @param {sleepCountArgs} args - Arguments to filter Sleeps to count.
      * @example
-     * // Count the number of Posts
-     * const count = await prisma.post.count({
+     * // Count the number of Sleeps
+     * const count = await prisma.sleep.count({
      *   where: {
-     *     // ... the filter for the Posts we want to count
+     *     // ... the filter for the Sleeps we want to count
      *   }
      * })
     **/
-    count<T extends PostCountArgs>(
-      args?: Subset<T, PostCountArgs>,
+    count<T extends sleepCountArgs>(
+      args?: Subset<T, sleepCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], PostCountAggregateOutputType>
+          : GetScalarType<T['select'], SleepCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Post.
+     * Allows you to perform aggregations operations on a Sleep.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {SleepAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2623,13 +2679,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends PostAggregateArgs>(args: Subset<T, PostAggregateArgs>): Prisma.PrismaPromise<GetPostAggregateType<T>>
+    aggregate<T extends SleepAggregateArgs>(args: Subset<T, SleepAggregateArgs>): Prisma.PrismaPromise<GetSleepAggregateType<T>>
 
     /**
-     * Group by Post.
+     * Group by Sleep.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {PostGroupByArgs} args - Group by arguments.
+     * @param {sleepGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2644,14 +2700,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends PostGroupByArgs,
+      T extends sleepGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: PostGroupByArgs['orderBy'] }
-        : { orderBy?: PostGroupByArgs['orderBy'] },
+        ? { orderBy: sleepGroupByArgs['orderBy'] }
+        : { orderBy?: sleepGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2700,22 +2756,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, PostGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetPostGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, sleepGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSleepGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Post model
+   * Fields of the sleep model
    */
-  readonly fields: PostFieldRefs;
+  readonly fields: sleepFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Post.
+   * The delegate class that acts as a "Promise-like" for sleep.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__PostClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__sleepClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    author<T extends Post$authorArgs<ExtArgs> = {}>(args?: Subset<T, Post$authorArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2742,444 +2798,425 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Post model
+   * Fields of the sleep model
    */
-  interface PostFieldRefs {
-    readonly id: FieldRef<"Post", 'Int'>
-    readonly title: FieldRef<"Post", 'String'>
-    readonly content: FieldRef<"Post", 'String'>
-    readonly published: FieldRef<"Post", 'Boolean'>
-    readonly authorId: FieldRef<"Post", 'Int'>
+  interface sleepFieldRefs {
+    readonly id: FieldRef<"sleep", 'Int'>
+    readonly start: FieldRef<"sleep", 'DateTime'>
+    readonly end: FieldRef<"sleep", 'DateTime'>
+    readonly duration: FieldRef<"sleep", 'Int'>
+    readonly userId: FieldRef<"sleep", 'Int'>
   }
     
 
   // Custom InputTypes
   /**
-   * Post findUnique
+   * sleep findUnique
    */
-  export type PostFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which sleep to fetch.
      */
-    where: PostWhereUniqueInput
+    where: sleepWhereUniqueInput
   }
 
   /**
-   * Post findUniqueOrThrow
+   * sleep findUniqueOrThrow
    */
-  export type PostFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which sleep to fetch.
      */
-    where: PostWhereUniqueInput
+    where: sleepWhereUniqueInput
   }
 
   /**
-   * Post findFirst
+   * sleep findFirst
    */
-  export type PostFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which sleep to fetch.
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of sleeps to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Posts.
+     * Sets the position for searching for sleeps.
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: sleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` sleeps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Posts.
+     * Filter by unique combinations of sleeps.
      */
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
-   * Post findFirstOrThrow
+   * sleep findFirstOrThrow
    */
-  export type PostFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * Filter, which Post to fetch.
+     * Filter, which sleep to fetch.
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of sleeps to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Posts.
+     * Sets the position for searching for sleeps.
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: sleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` sleeps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Posts.
+     * Filter by unique combinations of sleeps.
      */
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
-   * Post findMany
+   * sleep findMany
    */
-  export type PostFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * Filter, which Posts to fetch.
+     * Filter, which sleeps to fetch.
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Posts to fetch.
+     * Determine the order of sleeps to fetch.
      */
-    orderBy?: PostOrderByWithRelationInput | PostOrderByWithRelationInput[]
+    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Posts.
+     * Sets the position for listing sleeps.
      */
-    cursor?: PostWhereUniqueInput
+    cursor?: sleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Posts from the position of the cursor.
+     * Take `±n` sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Posts.
+     * Skip the first `n` sleeps.
      */
     skip?: number
-    distinct?: PostScalarFieldEnum | PostScalarFieldEnum[]
+    distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
-   * Post create
+   * sleep create
    */
-  export type PostCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * The data needed to create a Post.
+     * The data needed to create a sleep.
      */
-    data: XOR<PostCreateInput, PostUncheckedCreateInput>
+    data: XOR<sleepCreateInput, sleepUncheckedCreateInput>
   }
 
   /**
-   * Post createMany
+   * sleep createMany
    */
-  export type PostCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Posts.
+     * The data used to create many sleeps.
      */
-    data: PostCreateManyInput | PostCreateManyInput[]
+    data: sleepCreateManyInput | sleepCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Post createManyAndReturn
+   * sleep createManyAndReturn
    */
-  export type PostCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelectCreateManyAndReturn<ExtArgs> | null
+    select?: sleepSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
-     * The data used to create many Posts.
+     * The data used to create many sleeps.
      */
-    data: PostCreateManyInput | PostCreateManyInput[]
+    data: sleepCreateManyInput | sleepCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: sleepIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Post update
+   * sleep update
    */
-  export type PostUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * The data needed to update a Post.
+     * The data needed to update a sleep.
      */
-    data: XOR<PostUpdateInput, PostUncheckedUpdateInput>
+    data: XOR<sleepUpdateInput, sleepUncheckedUpdateInput>
     /**
-     * Choose, which Post to update.
+     * Choose, which sleep to update.
      */
-    where: PostWhereUniqueInput
+    where: sleepWhereUniqueInput
   }
 
   /**
-   * Post updateMany
+   * sleep updateMany
    */
-  export type PostUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Posts.
+     * The data used to update sleeps.
      */
-    data: XOR<PostUpdateManyMutationInput, PostUncheckedUpdateManyInput>
+    data: XOR<sleepUpdateManyMutationInput, sleepUncheckedUpdateManyInput>
     /**
-     * Filter which Posts to update
+     * Filter which sleeps to update
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
-     * Limit how many Posts to update.
+     * Limit how many sleeps to update.
      */
     limit?: number
   }
 
   /**
-   * Post updateManyAndReturn
+   * sleep updateManyAndReturn
    */
-  export type PostUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: sleepSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
-     * The data used to update Posts.
+     * The data used to update sleeps.
      */
-    data: XOR<PostUpdateManyMutationInput, PostUncheckedUpdateManyInput>
+    data: XOR<sleepUpdateManyMutationInput, sleepUncheckedUpdateManyInput>
     /**
-     * Filter which Posts to update
+     * Filter which sleeps to update
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
-     * Limit how many Posts to update.
+     * Limit how many sleeps to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: sleepIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Post upsert
+   * sleep upsert
    */
-  export type PostUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * The filter to search for the Post to update in case it exists.
+     * The filter to search for the sleep to update in case it exists.
      */
-    where: PostWhereUniqueInput
+    where: sleepWhereUniqueInput
     /**
-     * In case the Post found by the `where` argument doesn't exist, create a new Post with this data.
+     * In case the sleep found by the `where` argument doesn't exist, create a new sleep with this data.
      */
-    create: XOR<PostCreateInput, PostUncheckedCreateInput>
+    create: XOR<sleepCreateInput, sleepUncheckedCreateInput>
     /**
-     * In case the Post was found with the provided `where` argument, update it with this data.
+     * In case the sleep was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<PostUpdateInput, PostUncheckedUpdateInput>
+    update: XOR<sleepUpdateInput, sleepUncheckedUpdateInput>
   }
 
   /**
-   * Post delete
+   * sleep delete
    */
-  export type PostDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Post
+     * Select specific fields to fetch from the sleep
      */
-    select?: PostSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Post
+     * Omit specific fields from the sleep
      */
-    omit?: PostOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
     /**
-     * Filter which Post to delete.
+     * Filter which sleep to delete.
      */
-    where: PostWhereUniqueInput
+    where: sleepWhereUniqueInput
   }
 
   /**
-   * Post deleteMany
+   * sleep deleteMany
    */
-  export type PostDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Posts to delete
+     * Filter which sleeps to delete
      */
-    where?: PostWhereInput
+    where?: sleepWhereInput
     /**
-     * Limit how many Posts to delete.
+     * Limit how many sleeps to delete.
      */
     limit?: number
   }
 
   /**
-   * Post.author
+   * sleep without action
    */
-  export type Post$authorArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type sleepDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the sleep
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: sleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the sleep
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: sleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
-    where?: UserWhereInput
-  }
-
-  /**
-   * Post without action
-   */
-  export type PostDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Post
-     */
-    select?: PostSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Post
-     */
-    omit?: PostOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PostInclude<ExtArgs> | null
+    include?: sleepInclude<ExtArgs> | null
   }
 
 
@@ -3200,21 +3237,25 @@ export namespace Prisma {
   export const UserScalarFieldEnum: {
     id: 'id',
     email: 'email',
-    name: 'name'
+    name: 'name',
+    password: 'password',
+    birthDate: 'birthDate',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt'
   };
 
   export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
 
 
-  export const PostScalarFieldEnum: {
+  export const SleepScalarFieldEnum: {
     id: 'id',
-    title: 'title',
-    content: 'content',
-    published: 'published',
-    authorId: 'authorId'
+    start: 'start',
+    end: 'end',
+    duration: 'duration',
+    userId: 'userId'
   };
 
-  export type PostScalarFieldEnum = (typeof PostScalarFieldEnum)[keyof typeof PostScalarFieldEnum]
+  export type SleepScalarFieldEnum = (typeof SleepScalarFieldEnum)[keyof typeof SleepScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -3231,14 +3272,6 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
-
-
-  export const NullsOrder: {
-    first: 'first',
-    last: 'last'
-  };
-
-  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -3275,9 +3308,16 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Boolean'
+   * Reference to a field of type 'DateTime'
    */
-  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
+  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+    
+
+
+  /**
+   * Reference to a field of type 'DateTime[]'
+   */
+  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
     
 
 
@@ -3304,15 +3344,23 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     id?: IntFilter<"User"> | number
     email?: StringFilter<"User"> | string
-    name?: StringNullableFilter<"User"> | string | null
-    posts?: PostListRelationFilter
+    name?: StringFilter<"User"> | string
+    password?: StringFilter<"User"> | string
+    birthDate?: DateTimeFilter<"User"> | Date | string
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
+    sleep?: SleepListRelationFilter
   }
 
   export type UserOrderByWithRelationInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrderInput | SortOrder
-    posts?: PostOrderByRelationAggregateInput
+    name?: SortOrder
+    password?: SortOrder
+    birthDate?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    sleep?: sleepOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -3321,14 +3369,22 @@ export namespace Prisma {
     AND?: UserWhereInput | UserWhereInput[]
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
-    name?: StringNullableFilter<"User"> | string | null
-    posts?: PostListRelationFilter
+    name?: StringFilter<"User"> | string
+    password?: StringFilter<"User"> | string
+    birthDate?: DateTimeFilter<"User"> | Date | string
+    createdAt?: DateTimeFilter<"User"> | Date | string
+    updatedAt?: DateTimeFilter<"User"> | Date | string
+    sleep?: SleepListRelationFilter
   }, "id" | "email">
 
   export type UserOrderByWithAggregationInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrderInput | SortOrder
+    name?: SortOrder
+    password?: SortOrder
+    birthDate?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
     _avg?: UserAvgOrderByAggregateInput
     _max?: UserMaxOrderByAggregateInput
@@ -3342,159 +3398,191 @@ export namespace Prisma {
     NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"User"> | number
     email?: StringWithAggregatesFilter<"User"> | string
-    name?: StringNullableWithAggregatesFilter<"User"> | string | null
+    name?: StringWithAggregatesFilter<"User"> | string
+    password?: StringWithAggregatesFilter<"User"> | string
+    birthDate?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
-  export type PostWhereInput = {
-    AND?: PostWhereInput | PostWhereInput[]
-    OR?: PostWhereInput[]
-    NOT?: PostWhereInput | PostWhereInput[]
-    id?: IntFilter<"Post"> | number
-    title?: StringFilter<"Post"> | string
-    content?: StringNullableFilter<"Post"> | string | null
-    published?: BoolNullableFilter<"Post"> | boolean | null
-    authorId?: IntNullableFilter<"Post"> | number | null
-    author?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
+  export type sleepWhereInput = {
+    AND?: sleepWhereInput | sleepWhereInput[]
+    OR?: sleepWhereInput[]
+    NOT?: sleepWhereInput | sleepWhereInput[]
+    id?: IntFilter<"sleep"> | number
+    start?: DateTimeFilter<"sleep"> | Date | string
+    end?: DateTimeFilter<"sleep"> | Date | string
+    duration?: IntFilter<"sleep"> | number
+    userId?: IntFilter<"sleep"> | number
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }
 
-  export type PostOrderByWithRelationInput = {
+  export type sleepOrderByWithRelationInput = {
     id?: SortOrder
-    title?: SortOrder
-    content?: SortOrderInput | SortOrder
-    published?: SortOrderInput | SortOrder
-    authorId?: SortOrderInput | SortOrder
-    author?: UserOrderByWithRelationInput
+    start?: SortOrder
+    end?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
+    user?: UserOrderByWithRelationInput
   }
 
-  export type PostWhereUniqueInput = Prisma.AtLeast<{
+  export type sleepWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: PostWhereInput | PostWhereInput[]
-    OR?: PostWhereInput[]
-    NOT?: PostWhereInput | PostWhereInput[]
-    title?: StringFilter<"Post"> | string
-    content?: StringNullableFilter<"Post"> | string | null
-    published?: BoolNullableFilter<"Post"> | boolean | null
-    authorId?: IntNullableFilter<"Post"> | number | null
-    author?: XOR<UserNullableScalarRelationFilter, UserWhereInput> | null
+    AND?: sleepWhereInput | sleepWhereInput[]
+    OR?: sleepWhereInput[]
+    NOT?: sleepWhereInput | sleepWhereInput[]
+    start?: DateTimeFilter<"sleep"> | Date | string
+    end?: DateTimeFilter<"sleep"> | Date | string
+    duration?: IntFilter<"sleep"> | number
+    userId?: IntFilter<"sleep"> | number
+    user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }, "id">
 
-  export type PostOrderByWithAggregationInput = {
+  export type sleepOrderByWithAggregationInput = {
     id?: SortOrder
-    title?: SortOrder
-    content?: SortOrderInput | SortOrder
-    published?: SortOrderInput | SortOrder
-    authorId?: SortOrderInput | SortOrder
-    _count?: PostCountOrderByAggregateInput
-    _avg?: PostAvgOrderByAggregateInput
-    _max?: PostMaxOrderByAggregateInput
-    _min?: PostMinOrderByAggregateInput
-    _sum?: PostSumOrderByAggregateInput
+    start?: SortOrder
+    end?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
+    _count?: sleepCountOrderByAggregateInput
+    _avg?: sleepAvgOrderByAggregateInput
+    _max?: sleepMaxOrderByAggregateInput
+    _min?: sleepMinOrderByAggregateInput
+    _sum?: sleepSumOrderByAggregateInput
   }
 
-  export type PostScalarWhereWithAggregatesInput = {
-    AND?: PostScalarWhereWithAggregatesInput | PostScalarWhereWithAggregatesInput[]
-    OR?: PostScalarWhereWithAggregatesInput[]
-    NOT?: PostScalarWhereWithAggregatesInput | PostScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Post"> | number
-    title?: StringWithAggregatesFilter<"Post"> | string
-    content?: StringNullableWithAggregatesFilter<"Post"> | string | null
-    published?: BoolNullableWithAggregatesFilter<"Post"> | boolean | null
-    authorId?: IntNullableWithAggregatesFilter<"Post"> | number | null
+  export type sleepScalarWhereWithAggregatesInput = {
+    AND?: sleepScalarWhereWithAggregatesInput | sleepScalarWhereWithAggregatesInput[]
+    OR?: sleepScalarWhereWithAggregatesInput[]
+    NOT?: sleepScalarWhereWithAggregatesInput | sleepScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"sleep"> | number
+    start?: DateTimeWithAggregatesFilter<"sleep"> | Date | string
+    end?: DateTimeWithAggregatesFilter<"sleep"> | Date | string
+    duration?: IntWithAggregatesFilter<"sleep"> | number
+    userId?: IntWithAggregatesFilter<"sleep"> | number
   }
 
   export type UserCreateInput = {
     email: string
-    name?: string | null
-    posts?: PostCreateNestedManyWithoutAuthorInput
+    name: string
+    password: string
+    birthDate: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sleep?: sleepCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
     id?: number
     email: string
-    name?: string | null
-    posts?: PostUncheckedCreateNestedManyWithoutAuthorInput
+    name: string
+    password: string
+    birthDate: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
+    sleep?: sleepUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
-    posts?: PostUpdateManyWithoutAuthorNestedInput
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sleep?: sleepUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
-    posts?: PostUncheckedUpdateManyWithoutAuthorNestedInput
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    sleep?: sleepUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
     id?: number
     email: string
-    name?: string | null
+    name: string
+    password: string
+    birthDate: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
   export type UserUpdateManyMutationInput = {
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type UserUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PostCreateInput = {
-    title: string
-    content?: string | null
-    published?: boolean | null
-    author?: UserCreateNestedOneWithoutPostsInput
+  export type sleepCreateInput = {
+    start: Date | string
+    end: Date | string
+    duration: number
+    user: UserCreateNestedOneWithoutSleepInput
   }
 
-  export type PostUncheckedCreateInput = {
+  export type sleepUncheckedCreateInput = {
     id?: number
-    title: string
-    content?: string | null
-    published?: boolean | null
-    authorId?: number | null
+    start: Date | string
+    end: Date | string
+    duration: number
+    userId: number
   }
 
-  export type PostUpdateInput = {
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
-    author?: UserUpdateOneWithoutPostsNestedInput
+  export type sleepUpdateInput = {
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
+    user?: UserUpdateOneRequiredWithoutSleepNestedInput
   }
 
-  export type PostUncheckedUpdateInput = {
+  export type sleepUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
-    authorId?: NullableIntFieldUpdateOperationsInput | number | null
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
-  export type PostCreateManyInput = {
+  export type sleepCreateManyInput = {
     id?: number
-    title: string
-    content?: string | null
-    published?: boolean | null
-    authorId?: number | null
+    start: Date | string
+    end: Date | string
+    duration: number
+    userId: number
   }
 
-  export type PostUpdateManyMutationInput = {
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
+  export type sleepUpdateManyMutationInput = {
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
   }
 
-  export type PostUncheckedUpdateManyInput = {
+  export type sleepUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
-    authorId?: NullableIntFieldUpdateOperationsInput | number | null
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
+    userId?: IntFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -3523,33 +3611,24 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type StringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type PostListRelationFilter = {
-    every?: PostWhereInput
-    some?: PostWhereInput
-    none?: PostWhereInput
+  export type SleepListRelationFilter = {
+    every?: sleepWhereInput
+    some?: sleepWhereInput
+    none?: sleepWhereInput
   }
 
-  export type SortOrderInput = {
-    sort: SortOrder
-    nulls?: NullsOrder
-  }
-
-  export type PostOrderByRelationAggregateInput = {
+  export type sleepOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -3557,6 +3636,10 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    password?: SortOrder
+    birthDate?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserAvgOrderByAggregateInput = {
@@ -3567,12 +3650,20 @@ export namespace Prisma {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    password?: SortOrder
+    birthDate?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserMinOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
     name?: SortOrder
+    password?: SortOrder
+    birthDate?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
   }
 
   export type UserSumOrderByAggregateInput = {
@@ -3613,137 +3704,95 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type BoolNullableFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
-    not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
+  export type UserScalarRelationFilter = {
+    is?: UserWhereInput
+    isNot?: UserWhereInput
   }
 
-  export type IntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
-  }
-
-  export type UserNullableScalarRelationFilter = {
-    is?: UserWhereInput | null
-    isNot?: UserWhereInput | null
-  }
-
-  export type PostCountOrderByAggregateInput = {
+  export type sleepCountOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    content?: SortOrder
-    published?: SortOrder
-    authorId?: SortOrder
+    start?: SortOrder
+    end?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
   }
 
-  export type PostAvgOrderByAggregateInput = {
+  export type sleepAvgOrderByAggregateInput = {
     id?: SortOrder
-    authorId?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
   }
 
-  export type PostMaxOrderByAggregateInput = {
+  export type sleepMaxOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    content?: SortOrder
-    published?: SortOrder
-    authorId?: SortOrder
+    start?: SortOrder
+    end?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
   }
 
-  export type PostMinOrderByAggregateInput = {
+  export type sleepMinOrderByAggregateInput = {
     id?: SortOrder
-    title?: SortOrder
-    content?: SortOrder
-    published?: SortOrder
-    authorId?: SortOrder
+    start?: SortOrder
+    end?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
   }
 
-  export type PostSumOrderByAggregateInput = {
+  export type sleepSumOrderByAggregateInput = {
     id?: SortOrder
-    authorId?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
   }
 
-  export type BoolNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
-    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedBoolNullableFilter<$PrismaModel>
-    _max?: NestedBoolNullableFilter<$PrismaModel>
+  export type sleepCreateNestedManyWithoutUserInput = {
+    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
+    createMany?: sleepCreateManyUserInputEnvelope
+    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
   }
 
-  export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _avg?: NestedFloatNullableFilter<$PrismaModel>
-    _sum?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedIntNullableFilter<$PrismaModel>
-    _max?: NestedIntNullableFilter<$PrismaModel>
-  }
-
-  export type PostCreateNestedManyWithoutAuthorInput = {
-    create?: XOR<PostCreateWithoutAuthorInput, PostUncheckedCreateWithoutAuthorInput> | PostCreateWithoutAuthorInput[] | PostUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutAuthorInput | PostCreateOrConnectWithoutAuthorInput[]
-    createMany?: PostCreateManyAuthorInputEnvelope
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-  }
-
-  export type PostUncheckedCreateNestedManyWithoutAuthorInput = {
-    create?: XOR<PostCreateWithoutAuthorInput, PostUncheckedCreateWithoutAuthorInput> | PostCreateWithoutAuthorInput[] | PostUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutAuthorInput | PostCreateOrConnectWithoutAuthorInput[]
-    createMany?: PostCreateManyAuthorInputEnvelope
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
+  export type sleepUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
+    createMany?: sleepCreateManyUserInputEnvelope
+    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
   }
 
-  export type PostUpdateManyWithoutAuthorNestedInput = {
-    create?: XOR<PostCreateWithoutAuthorInput, PostUncheckedCreateWithoutAuthorInput> | PostCreateWithoutAuthorInput[] | PostUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutAuthorInput | PostCreateOrConnectWithoutAuthorInput[]
-    upsert?: PostUpsertWithWhereUniqueWithoutAuthorInput | PostUpsertWithWhereUniqueWithoutAuthorInput[]
-    createMany?: PostCreateManyAuthorInputEnvelope
-    set?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    disconnect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    delete?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    update?: PostUpdateWithWhereUniqueWithoutAuthorInput | PostUpdateWithWhereUniqueWithoutAuthorInput[]
-    updateMany?: PostUpdateManyWithWhereWithoutAuthorInput | PostUpdateManyWithWhereWithoutAuthorInput[]
-    deleteMany?: PostScalarWhereInput | PostScalarWhereInput[]
+  export type sleepUpdateManyWithoutUserNestedInput = {
+    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
+    upsert?: sleepUpsertWithWhereUniqueWithoutUserInput | sleepUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: sleepCreateManyUserInputEnvelope
+    set?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    disconnect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    delete?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    update?: sleepUpdateWithWhereUniqueWithoutUserInput | sleepUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: sleepUpdateManyWithWhereWithoutUserInput | sleepUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: sleepScalarWhereInput | sleepScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -3754,46 +3803,32 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type PostUncheckedUpdateManyWithoutAuthorNestedInput = {
-    create?: XOR<PostCreateWithoutAuthorInput, PostUncheckedCreateWithoutAuthorInput> | PostCreateWithoutAuthorInput[] | PostUncheckedCreateWithoutAuthorInput[]
-    connectOrCreate?: PostCreateOrConnectWithoutAuthorInput | PostCreateOrConnectWithoutAuthorInput[]
-    upsert?: PostUpsertWithWhereUniqueWithoutAuthorInput | PostUpsertWithWhereUniqueWithoutAuthorInput[]
-    createMany?: PostCreateManyAuthorInputEnvelope
-    set?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    disconnect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    delete?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    connect?: PostWhereUniqueInput | PostWhereUniqueInput[]
-    update?: PostUpdateWithWhereUniqueWithoutAuthorInput | PostUpdateWithWhereUniqueWithoutAuthorInput[]
-    updateMany?: PostUpdateManyWithWhereWithoutAuthorInput | PostUpdateManyWithWhereWithoutAuthorInput[]
-    deleteMany?: PostScalarWhereInput | PostScalarWhereInput[]
+  export type sleepUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
+    upsert?: sleepUpsertWithWhereUniqueWithoutUserInput | sleepUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: sleepCreateManyUserInputEnvelope
+    set?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    disconnect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    delete?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+    update?: sleepUpdateWithWhereUniqueWithoutUserInput | sleepUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: sleepUpdateManyWithWhereWithoutUserInput | sleepUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: sleepScalarWhereInput | sleepScalarWhereInput[]
   }
 
-  export type UserCreateNestedOneWithoutPostsInput = {
-    create?: XOR<UserCreateWithoutPostsInput, UserUncheckedCreateWithoutPostsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutPostsInput
+  export type UserCreateNestedOneWithoutSleepInput = {
+    create?: XOR<UserCreateWithoutSleepInput, UserUncheckedCreateWithoutSleepInput>
+    connectOrCreate?: UserCreateOrConnectWithoutSleepInput
     connect?: UserWhereUniqueInput
   }
 
-  export type NullableBoolFieldUpdateOperationsInput = {
-    set?: boolean | null
-  }
-
-  export type UserUpdateOneWithoutPostsNestedInput = {
-    create?: XOR<UserCreateWithoutPostsInput, UserUncheckedCreateWithoutPostsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutPostsInput
-    upsert?: UserUpsertWithoutPostsInput
-    disconnect?: UserWhereInput | boolean
-    delete?: UserWhereInput | boolean
+  export type UserUpdateOneRequiredWithoutSleepNestedInput = {
+    create?: XOR<UserCreateWithoutSleepInput, UserUncheckedCreateWithoutSleepInput>
+    connectOrCreate?: UserCreateOrConnectWithoutSleepInput
+    upsert?: UserUpsertWithoutSleepInput
     connect?: UserWhereUniqueInput
-    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutPostsInput, UserUpdateWithoutPostsInput>, UserUncheckedUpdateWithoutPostsInput>
-  }
-
-  export type NullableIntFieldUpdateOperationsInput = {
-    set?: number | null
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
+    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutSleepInput, UserUpdateWithoutSleepInput>, UserUncheckedUpdateWithoutSleepInput>
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -3821,18 +3856,15 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedStringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
@@ -3879,187 +3911,149 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
+  export type sleepCreateWithoutUserInput = {
+    start: Date | string
+    end: Date | string
+    duration: number
   }
 
-  export type NestedBoolNullableFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
-    not?: NestedBoolNullableFilter<$PrismaModel> | boolean | null
-  }
-
-  export type NestedBoolNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: boolean | BooleanFieldRefInput<$PrismaModel> | null
-    not?: NestedBoolNullableWithAggregatesFilter<$PrismaModel> | boolean | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedBoolNullableFilter<$PrismaModel>
-    _max?: NestedBoolNullableFilter<$PrismaModel>
-  }
-
-  export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableWithAggregatesFilter<$PrismaModel> | number | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _avg?: NestedFloatNullableFilter<$PrismaModel>
-    _sum?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedIntNullableFilter<$PrismaModel>
-    _max?: NestedIntNullableFilter<$PrismaModel>
-  }
-
-  export type NestedFloatNullableFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatNullableFilter<$PrismaModel> | number | null
-  }
-
-  export type PostCreateWithoutAuthorInput = {
-    title: string
-    content?: string | null
-    published?: boolean | null
-  }
-
-  export type PostUncheckedCreateWithoutAuthorInput = {
+  export type sleepUncheckedCreateWithoutUserInput = {
     id?: number
-    title: string
-    content?: string | null
-    published?: boolean | null
+    start: Date | string
+    end: Date | string
+    duration: number
   }
 
-  export type PostCreateOrConnectWithoutAuthorInput = {
-    where: PostWhereUniqueInput
-    create: XOR<PostCreateWithoutAuthorInput, PostUncheckedCreateWithoutAuthorInput>
+  export type sleepCreateOrConnectWithoutUserInput = {
+    where: sleepWhereUniqueInput
+    create: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput>
   }
 
-  export type PostCreateManyAuthorInputEnvelope = {
-    data: PostCreateManyAuthorInput | PostCreateManyAuthorInput[]
+  export type sleepCreateManyUserInputEnvelope = {
+    data: sleepCreateManyUserInput | sleepCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type PostUpsertWithWhereUniqueWithoutAuthorInput = {
-    where: PostWhereUniqueInput
-    update: XOR<PostUpdateWithoutAuthorInput, PostUncheckedUpdateWithoutAuthorInput>
-    create: XOR<PostCreateWithoutAuthorInput, PostUncheckedCreateWithoutAuthorInput>
+  export type sleepUpsertWithWhereUniqueWithoutUserInput = {
+    where: sleepWhereUniqueInput
+    update: XOR<sleepUpdateWithoutUserInput, sleepUncheckedUpdateWithoutUserInput>
+    create: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput>
   }
 
-  export type PostUpdateWithWhereUniqueWithoutAuthorInput = {
-    where: PostWhereUniqueInput
-    data: XOR<PostUpdateWithoutAuthorInput, PostUncheckedUpdateWithoutAuthorInput>
+  export type sleepUpdateWithWhereUniqueWithoutUserInput = {
+    where: sleepWhereUniqueInput
+    data: XOR<sleepUpdateWithoutUserInput, sleepUncheckedUpdateWithoutUserInput>
   }
 
-  export type PostUpdateManyWithWhereWithoutAuthorInput = {
-    where: PostScalarWhereInput
-    data: XOR<PostUpdateManyMutationInput, PostUncheckedUpdateManyWithoutAuthorInput>
+  export type sleepUpdateManyWithWhereWithoutUserInput = {
+    where: sleepScalarWhereInput
+    data: XOR<sleepUpdateManyMutationInput, sleepUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type PostScalarWhereInput = {
-    AND?: PostScalarWhereInput | PostScalarWhereInput[]
-    OR?: PostScalarWhereInput[]
-    NOT?: PostScalarWhereInput | PostScalarWhereInput[]
-    id?: IntFilter<"Post"> | number
-    title?: StringFilter<"Post"> | string
-    content?: StringNullableFilter<"Post"> | string | null
-    published?: BoolNullableFilter<"Post"> | boolean | null
-    authorId?: IntNullableFilter<"Post"> | number | null
+  export type sleepScalarWhereInput = {
+    AND?: sleepScalarWhereInput | sleepScalarWhereInput[]
+    OR?: sleepScalarWhereInput[]
+    NOT?: sleepScalarWhereInput | sleepScalarWhereInput[]
+    id?: IntFilter<"sleep"> | number
+    start?: DateTimeFilter<"sleep"> | Date | string
+    end?: DateTimeFilter<"sleep"> | Date | string
+    duration?: IntFilter<"sleep"> | number
+    userId?: IntFilter<"sleep"> | number
   }
 
-  export type UserCreateWithoutPostsInput = {
+  export type UserCreateWithoutSleepInput = {
     email: string
-    name?: string | null
+    name: string
+    password: string
+    birthDate: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
-  export type UserUncheckedCreateWithoutPostsInput = {
+  export type UserUncheckedCreateWithoutSleepInput = {
     id?: number
     email: string
-    name?: string | null
+    name: string
+    password: string
+    birthDate: Date | string
+    createdAt?: Date | string
+    updatedAt?: Date | string
   }
 
-  export type UserCreateOrConnectWithoutPostsInput = {
+  export type UserCreateOrConnectWithoutSleepInput = {
     where: UserWhereUniqueInput
-    create: XOR<UserCreateWithoutPostsInput, UserUncheckedCreateWithoutPostsInput>
+    create: XOR<UserCreateWithoutSleepInput, UserUncheckedCreateWithoutSleepInput>
   }
 
-  export type UserUpsertWithoutPostsInput = {
-    update: XOR<UserUpdateWithoutPostsInput, UserUncheckedUpdateWithoutPostsInput>
-    create: XOR<UserCreateWithoutPostsInput, UserUncheckedCreateWithoutPostsInput>
+  export type UserUpsertWithoutSleepInput = {
+    update: XOR<UserUpdateWithoutSleepInput, UserUncheckedUpdateWithoutSleepInput>
+    create: XOR<UserCreateWithoutSleepInput, UserUncheckedCreateWithoutSleepInput>
     where?: UserWhereInput
   }
 
-  export type UserUpdateToOneWithWhereWithoutPostsInput = {
+  export type UserUpdateToOneWithWhereWithoutSleepInput = {
     where?: UserWhereInput
-    data: XOR<UserUpdateWithoutPostsInput, UserUncheckedUpdateWithoutPostsInput>
+    data: XOR<UserUpdateWithoutSleepInput, UserUncheckedUpdateWithoutSleepInput>
   }
 
-  export type UserUpdateWithoutPostsInput = {
+  export type UserUpdateWithoutSleepInput = {
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type UserUncheckedUpdateWithoutPostsInput = {
+  export type UserUncheckedUpdateWithoutSleepInput = {
     id?: IntFieldUpdateOperationsInput | number
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    name?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type PostCreateManyAuthorInput = {
+  export type sleepCreateManyUserInput = {
     id?: number
-    title: string
-    content?: string | null
-    published?: boolean | null
+    start: Date | string
+    end: Date | string
+    duration: number
   }
 
-  export type PostUpdateWithoutAuthorInput = {
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
+  export type sleepUpdateWithoutUserInput = {
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
   }
 
-  export type PostUncheckedUpdateWithoutAuthorInput = {
+  export type sleepUncheckedUpdateWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
   }
 
-  export type PostUncheckedUpdateManyWithoutAuthorInput = {
+  export type sleepUncheckedUpdateManyWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
-    title?: StringFieldUpdateOperationsInput | string
-    content?: NullableStringFieldUpdateOperationsInput | string | null
-    published?: NullableBoolFieldUpdateOperationsInput | boolean | null
+    start?: DateTimeFieldUpdateOperationsInput | Date | string
+    end?: DateTimeFieldUpdateOperationsInput | Date | string
+    duration?: IntFieldUpdateOperationsInput | number
   }
 
 

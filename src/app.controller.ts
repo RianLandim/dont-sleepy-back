@@ -1,11 +1,11 @@
 import { Controller } from '@nestjs/common';
-import { UserController } from './user/user.controller';
-import { PostController } from './post/post.controller';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-    constructor(
-        private readonly userController: UserController,
-        private readonly postController: PostController,
-    ) {}
+    constructor(private readonly appService: AppService) {}
+
+    getHello(): string {
+        return 'Hello World!';
+    }
 }
