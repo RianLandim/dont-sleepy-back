@@ -1,5 +1,12 @@
-// Aqui vão tudo que são rotas, que atualmente estão em app.controller tudo junto
-import { Controller, Post, Body, Query, Get } from '@nestjs/common';
+import {
+    Controller,
+    Post,
+    Body,
+    Query,
+    Get,
+    Patch,
+    Request,
+} from '@nestjs/common';
 import { User as UserModel } from 'generated/prisma';
 import { UsersService } from './user.service';
 import { AuthService } from '../auth/auth.service';
@@ -58,6 +65,30 @@ export class UserController {
         return this.userService.users({
             skip: skip ? Number(skip) : undefined,
             take: take ? Number(take) : undefined,
+        });
+    }
+
+    @Patch('update')
+    async updateUserInfo(
+        @Request() req,
+        @Body()
+        updateData: {
+            name?: string;
+            birthDate?: Date;
+            cep?: string;
+            estado?: string;
+            cidade?: string;
+            uf?: string;
+            bairro?: string;
+            rua?: string;
+            numero?: string;
+        },
+    ) {
+        const userId = req.user.userId;
+        // Não permite editar email e senha
+        return this.userService.updateUser({
+            where: { id: userId },
+            data: updateData,
         });
     }
 }
