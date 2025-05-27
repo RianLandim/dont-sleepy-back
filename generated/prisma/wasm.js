@@ -123,6 +123,13 @@ exports.Prisma.UserScalarFieldEnum = {
   name: 'name',
   password: 'password',
   birthDate: 'birthDate',
+  cep: 'cep',
+  estado: 'estado',
+  cidade: 'cidade',
+  uf: 'uf',
+  bairro: 'bairro',
+  rua: 'rua',
+  numero: 'numero',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };

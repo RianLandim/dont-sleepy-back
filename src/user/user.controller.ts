@@ -19,6 +19,13 @@ export class UserController {
             name: string;
             password: string;
             birthDate: Date;
+            cep: string;
+            estado: string;
+            cidade: string;
+            uf: string;
+            bairro: string;
+            rua: string;
+            numero: string;
         },
     ): Promise<Omit<UserModel, 'password'>> {
         const hashedPassword = await this.authService.hashPassword(
@@ -29,6 +36,13 @@ export class UserController {
             name: userData.name,
             password: hashedPassword,
             birthDate: userData.birthDate,
+            cep: userData.cep,
+            estado: userData.estado,
+            cidade: userData.cidade,
+            uf: userData.uf,
+            bairro: userData.bairro,
+            rua: userData.rua,
+            numero: userData.numero,
         });
         // Não retorna a senha
         const { password, ...userWithoutPassword } = user;

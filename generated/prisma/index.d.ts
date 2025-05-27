@@ -1016,6 +1016,13 @@ export namespace Prisma {
     name: string | null
     password: string | null
     birthDate: Date | null
+    cep: string | null
+    estado: string | null
+    cidade: string | null
+    uf: string | null
+    bairro: string | null
+    rua: string | null
+    numero: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -1026,6 +1033,13 @@ export namespace Prisma {
     name: string | null
     password: string | null
     birthDate: Date | null
+    cep: string | null
+    estado: string | null
+    cidade: string | null
+    uf: string | null
+    bairro: string | null
+    rua: string | null
+    numero: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -1036,6 +1050,13 @@ export namespace Prisma {
     name: number
     password: number
     birthDate: number
+    cep: number
+    estado: number
+    cidade: number
+    uf: number
+    bairro: number
+    rua: number
+    numero: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -1056,6 +1077,13 @@ export namespace Prisma {
     name?: true
     password?: true
     birthDate?: true
+    cep?: true
+    estado?: true
+    cidade?: true
+    uf?: true
+    bairro?: true
+    rua?: true
+    numero?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -1066,6 +1094,13 @@ export namespace Prisma {
     name?: true
     password?: true
     birthDate?: true
+    cep?: true
+    estado?: true
+    cidade?: true
+    uf?: true
+    bairro?: true
+    rua?: true
+    numero?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -1076,6 +1111,13 @@ export namespace Prisma {
     name?: true
     password?: true
     birthDate?: true
+    cep?: true
+    estado?: true
+    cidade?: true
+    uf?: true
+    bairro?: true
+    rua?: true
+    numero?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -1173,6 +1215,13 @@ export namespace Prisma {
     name: string
     password: string
     birthDate: Date
+    cep: string
+    estado: string
+    cidade: string
+    uf: string
+    bairro: string
+    rua: string
+    numero: string
     createdAt: Date
     updatedAt: Date
     _count: UserCountAggregateOutputType | null
@@ -1202,6 +1251,13 @@ export namespace Prisma {
     name?: boolean
     password?: boolean
     birthDate?: boolean
+    cep?: boolean
+    estado?: boolean
+    cidade?: boolean
+    uf?: boolean
+    bairro?: boolean
+    rua?: boolean
+    numero?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     sleep?: boolean | User$sleepArgs<ExtArgs>
@@ -1214,6 +1270,13 @@ export namespace Prisma {
     name?: boolean
     password?: boolean
     birthDate?: boolean
+    cep?: boolean
+    estado?: boolean
+    cidade?: boolean
+    uf?: boolean
+    bairro?: boolean
+    rua?: boolean
+    numero?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1224,6 +1287,13 @@ export namespace Prisma {
     name?: boolean
     password?: boolean
     birthDate?: boolean
+    cep?: boolean
+    estado?: boolean
+    cidade?: boolean
+    uf?: boolean
+    bairro?: boolean
+    rua?: boolean
+    numero?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1234,11 +1304,18 @@ export namespace Prisma {
     name?: boolean
     password?: boolean
     birthDate?: boolean
+    cep?: boolean
+    estado?: boolean
+    cidade?: boolean
+    uf?: boolean
+    bairro?: boolean
+    rua?: boolean
+    numero?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "birthDate" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "birthDate" | "cep" | "estado" | "cidade" | "uf" | "bairro" | "rua" | "numero" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     sleep?: boolean | User$sleepArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1257,6 +1334,13 @@ export namespace Prisma {
       name: string
       password: string
       birthDate: Date
+      cep: string
+      estado: string
+      cidade: string
+      uf: string
+      bairro: string
+      rua: string
+      numero: string
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["user"]>
@@ -1688,6 +1772,13 @@ export namespace Prisma {
     readonly name: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
     readonly birthDate: FieldRef<"User", 'DateTime'>
+    readonly cep: FieldRef<"User", 'String'>
+    readonly estado: FieldRef<"User", 'String'>
+    readonly cidade: FieldRef<"User", 'String'>
+    readonly uf: FieldRef<"User", 'String'>
+    readonly bairro: FieldRef<"User", 'String'>
+    readonly rua: FieldRef<"User", 'String'>
+    readonly numero: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
@@ -3240,6 +3331,13 @@ export namespace Prisma {
     name: 'name',
     password: 'password',
     birthDate: 'birthDate',
+    cep: 'cep',
+    estado: 'estado',
+    cidade: 'cidade',
+    uf: 'uf',
+    bairro: 'bairro',
+    rua: 'rua',
+    numero: 'numero',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -3347,6 +3445,13 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     birthDate?: DateTimeFilter<"User"> | Date | string
+    cep?: StringFilter<"User"> | string
+    estado?: StringFilter<"User"> | string
+    cidade?: StringFilter<"User"> | string
+    uf?: StringFilter<"User"> | string
+    bairro?: StringFilter<"User"> | string
+    rua?: StringFilter<"User"> | string
+    numero?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     sleep?: SleepListRelationFilter
@@ -3358,6 +3463,13 @@ export namespace Prisma {
     name?: SortOrder
     password?: SortOrder
     birthDate?: SortOrder
+    cep?: SortOrder
+    estado?: SortOrder
+    cidade?: SortOrder
+    uf?: SortOrder
+    bairro?: SortOrder
+    rua?: SortOrder
+    numero?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     sleep?: SleepOrderByRelationAggregateInput
@@ -3372,6 +3484,13 @@ export namespace Prisma {
     name?: StringFilter<"User"> | string
     password?: StringFilter<"User"> | string
     birthDate?: DateTimeFilter<"User"> | Date | string
+    cep?: StringFilter<"User"> | string
+    estado?: StringFilter<"User"> | string
+    cidade?: StringFilter<"User"> | string
+    uf?: StringFilter<"User"> | string
+    bairro?: StringFilter<"User"> | string
+    rua?: StringFilter<"User"> | string
+    numero?: StringFilter<"User"> | string
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     sleep?: SleepListRelationFilter
@@ -3383,6 +3502,13 @@ export namespace Prisma {
     name?: SortOrder
     password?: SortOrder
     birthDate?: SortOrder
+    cep?: SortOrder
+    estado?: SortOrder
+    cidade?: SortOrder
+    uf?: SortOrder
+    bairro?: SortOrder
+    rua?: SortOrder
+    numero?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -3401,6 +3527,13 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"User"> | string
     password?: StringWithAggregatesFilter<"User"> | string
     birthDate?: DateTimeWithAggregatesFilter<"User"> | Date | string
+    cep?: StringWithAggregatesFilter<"User"> | string
+    estado?: StringWithAggregatesFilter<"User"> | string
+    cidade?: StringWithAggregatesFilter<"User"> | string
+    uf?: StringWithAggregatesFilter<"User"> | string
+    bairro?: StringWithAggregatesFilter<"User"> | string
+    rua?: StringWithAggregatesFilter<"User"> | string
+    numero?: StringWithAggregatesFilter<"User"> | string
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -3467,6 +3600,13 @@ export namespace Prisma {
     name: string
     password: string
     birthDate: Date | string
+    cep: string
+    estado: string
+    cidade: string
+    uf: string
+    bairro: string
+    rua: string
+    numero: string
     createdAt?: Date | string
     updatedAt?: Date | string
     sleep?: SleepCreateNestedManyWithoutUserInput
@@ -3478,6 +3618,13 @@ export namespace Prisma {
     name: string
     password: string
     birthDate: Date | string
+    cep: string
+    estado: string
+    cidade: string
+    uf: string
+    bairro: string
+    rua: string
+    numero: string
     createdAt?: Date | string
     updatedAt?: Date | string
     sleep?: SleepUncheckedCreateNestedManyWithoutUserInput
@@ -3488,6 +3635,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    cep?: StringFieldUpdateOperationsInput | string
+    estado?: StringFieldUpdateOperationsInput | string
+    cidade?: StringFieldUpdateOperationsInput | string
+    uf?: StringFieldUpdateOperationsInput | string
+    bairro?: StringFieldUpdateOperationsInput | string
+    rua?: StringFieldUpdateOperationsInput | string
+    numero?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sleep?: SleepUpdateManyWithoutUserNestedInput
@@ -3499,6 +3653,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    cep?: StringFieldUpdateOperationsInput | string
+    estado?: StringFieldUpdateOperationsInput | string
+    cidade?: StringFieldUpdateOperationsInput | string
+    uf?: StringFieldUpdateOperationsInput | string
+    bairro?: StringFieldUpdateOperationsInput | string
+    rua?: StringFieldUpdateOperationsInput | string
+    numero?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     sleep?: SleepUncheckedUpdateManyWithoutUserNestedInput
@@ -3510,6 +3671,13 @@ export namespace Prisma {
     name: string
     password: string
     birthDate: Date | string
+    cep: string
+    estado: string
+    cidade: string
+    uf: string
+    bairro: string
+    rua: string
+    numero: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3519,6 +3687,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    cep?: StringFieldUpdateOperationsInput | string
+    estado?: StringFieldUpdateOperationsInput | string
+    cidade?: StringFieldUpdateOperationsInput | string
+    uf?: StringFieldUpdateOperationsInput | string
+    bairro?: StringFieldUpdateOperationsInput | string
+    rua?: StringFieldUpdateOperationsInput | string
+    numero?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3529,6 +3704,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    cep?: StringFieldUpdateOperationsInput | string
+    estado?: StringFieldUpdateOperationsInput | string
+    cidade?: StringFieldUpdateOperationsInput | string
+    uf?: StringFieldUpdateOperationsInput | string
+    bairro?: StringFieldUpdateOperationsInput | string
+    rua?: StringFieldUpdateOperationsInput | string
+    numero?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3638,6 +3820,13 @@ export namespace Prisma {
     name?: SortOrder
     password?: SortOrder
     birthDate?: SortOrder
+    cep?: SortOrder
+    estado?: SortOrder
+    cidade?: SortOrder
+    uf?: SortOrder
+    bairro?: SortOrder
+    rua?: SortOrder
+    numero?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -3652,6 +3841,13 @@ export namespace Prisma {
     name?: SortOrder
     password?: SortOrder
     birthDate?: SortOrder
+    cep?: SortOrder
+    estado?: SortOrder
+    cidade?: SortOrder
+    uf?: SortOrder
+    bairro?: SortOrder
+    rua?: SortOrder
+    numero?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -3662,6 +3858,13 @@ export namespace Prisma {
     name?: SortOrder
     password?: SortOrder
     birthDate?: SortOrder
+    cep?: SortOrder
+    estado?: SortOrder
+    cidade?: SortOrder
+    uf?: SortOrder
+    bairro?: SortOrder
+    rua?: SortOrder
+    numero?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -3980,6 +4183,13 @@ export namespace Prisma {
     name: string
     password: string
     birthDate: Date | string
+    cep: string
+    estado: string
+    cidade: string
+    uf: string
+    bairro: string
+    rua: string
+    numero: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3990,6 +4200,13 @@ export namespace Prisma {
     name: string
     password: string
     birthDate: Date | string
+    cep: string
+    estado: string
+    cidade: string
+    uf: string
+    bairro: string
+    rua: string
+    numero: string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4015,6 +4232,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    cep?: StringFieldUpdateOperationsInput | string
+    estado?: StringFieldUpdateOperationsInput | string
+    cidade?: StringFieldUpdateOperationsInput | string
+    uf?: StringFieldUpdateOperationsInput | string
+    bairro?: StringFieldUpdateOperationsInput | string
+    rua?: StringFieldUpdateOperationsInput | string
+    numero?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4025,6 +4249,13 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
+    cep?: StringFieldUpdateOperationsInput | string
+    estado?: StringFieldUpdateOperationsInput | string
+    cidade?: StringFieldUpdateOperationsInput | string
+    uf?: StringFieldUpdateOperationsInput | string
+    bairro?: StringFieldUpdateOperationsInput | string
+    rua?: StringFieldUpdateOperationsInput | string
+    numero?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }

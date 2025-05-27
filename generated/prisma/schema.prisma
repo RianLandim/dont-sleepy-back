@@ -20,6 +20,13 @@ model User {
   name      String
   password  String
   birthDate DateTime
+  cep       String
+  estado    String
+  cidade    String
+  uf        String
+  bairro    String
+  rua       String
+  numero    String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -27,7 +34,6 @@ model User {
   sleep Sleep[]
 }
 
-// A ideia aqui é que sempre que o usuário dormir, registar uma dormida e vincular a ele. Assim teremos estatísticas.
 model Sleep {
   id       Int      @id @default(autoincrement())
   start    DateTime

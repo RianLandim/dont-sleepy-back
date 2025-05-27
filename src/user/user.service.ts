@@ -33,7 +33,19 @@ export class UsersService {
 
     async createUser(data: Prisma.UserCreateInput): Promise<User> {
         return this.prisma.user.create({
-            data,
+            data: {
+                email: data.email,
+                name: data.name,
+                password: data.password,
+                birthDate: data.birthDate,
+                cep: data.cep,
+                estado: data.estado,
+                cidade: data.cidade,
+                uf: data.uf,
+                bairro: data.bairro,
+                rua: data.rua,
+                numero: data.numero,
+            },
         });
     }
 
