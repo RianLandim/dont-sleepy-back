@@ -37,7 +37,7 @@ export class UsersService {
                 email: data.email,
                 name: data.name,
                 password: data.password,
-                birthDate: data.birthDate,
+                birthDate: new Date(data.birthDate),
                 cep: data.cep,
                 estado: data.estado,
                 cidade: data.cidade,
