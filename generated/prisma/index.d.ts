@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type User = $Result.DefaultSelection<Prisma.$UserPayload>
 /**
- * Model sleep
+ * Model Sleep
  * 
  */
-export type sleep = $Result.DefaultSelection<Prisma.$sleepPayload>
+export type Sleep = $Result.DefaultSelection<Prisma.$SleepPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -160,14 +160,14 @@ export class PrismaClient<
   get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.sleep`: Exposes CRUD operations for the **sleep** model.
+   * `prisma.sleep`: Exposes CRUD operations for the **Sleep** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Sleeps
     * const sleeps = await prisma.sleep.findMany()
     * ```
     */
-  get sleep(): Prisma.sleepDelegate<ExtArgs, ClientOptions>;
+  get sleep(): Prisma.SleepDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -609,7 +609,7 @@ export namespace Prisma {
 
   export const ModelName: {
     User: 'User',
-    sleep: 'sleep'
+    Sleep: 'Sleep'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -706,76 +706,76 @@ export namespace Prisma {
           }
         }
       }
-      sleep: {
-        payload: Prisma.$sleepPayload<ExtArgs>
-        fields: Prisma.sleepFieldRefs
+      Sleep: {
+        payload: Prisma.$SleepPayload<ExtArgs>
+        fields: Prisma.SleepFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.sleepFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload> | null
+            args: Prisma.SleepFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.sleepFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
+            args: Prisma.SleepFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>
           }
           findFirst: {
-            args: Prisma.sleepFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload> | null
+            args: Prisma.SleepFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.sleepFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
+            args: Prisma.SleepFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>
           }
           findMany: {
-            args: Prisma.sleepFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>[]
+            args: Prisma.SleepFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>[]
           }
           create: {
-            args: Prisma.sleepCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
+            args: Prisma.SleepCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>
           }
           createMany: {
-            args: Prisma.sleepCreateManyArgs<ExtArgs>
+            args: Prisma.SleepCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.sleepCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>[]
+            args: Prisma.SleepCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>[]
           }
           delete: {
-            args: Prisma.sleepDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
+            args: Prisma.SleepDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>
           }
           update: {
-            args: Prisma.sleepUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
+            args: Prisma.SleepUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>
           }
           deleteMany: {
-            args: Prisma.sleepDeleteManyArgs<ExtArgs>
+            args: Prisma.SleepDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.sleepUpdateManyArgs<ExtArgs>
+            args: Prisma.SleepUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.sleepUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>[]
+            args: Prisma.SleepUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>[]
           }
           upsert: {
-            args: Prisma.sleepUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$sleepPayload>
+            args: Prisma.SleepUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$SleepPayload>
           }
           aggregate: {
             args: Prisma.SleepAggregateArgs<ExtArgs>
             result: $Utils.Optional<AggregateSleep>
           }
           groupBy: {
-            args: Prisma.sleepGroupByArgs<ExtArgs>
+            args: Prisma.SleepGroupByArgs<ExtArgs>
             result: $Utils.Optional<SleepGroupByOutputType>[]
           }
           count: {
-            args: Prisma.sleepCountArgs<ExtArgs>
+            args: Prisma.SleepCountArgs<ExtArgs>
             result: $Utils.Optional<SleepCountAggregateOutputType> | number
           }
         }
@@ -865,7 +865,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     user?: UserOmit
-    sleep?: sleepOmit
+    sleep?: SleepOmit
   }
 
   /* Types for Logging */
@@ -982,7 +982,7 @@ export namespace Prisma {
    * UserCountOutputType without action
    */
   export type UserCountOutputTypeCountSleepArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: sleepWhereInput
+    where?: SleepWhereInput
   }
 
 
@@ -1249,7 +1249,7 @@ export namespace Prisma {
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
     objects: {
-      sleep: Prisma.$sleepPayload<ExtArgs>[]
+      sleep: Prisma.$SleepPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1653,7 +1653,7 @@ export namespace Prisma {
    */
   export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    sleep<T extends User$sleepArgs<ExtArgs> = {}>(args?: Subset<T, User$sleepArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    sleep<T extends User$sleepArgs<ExtArgs> = {}>(args?: Subset<T, User$sleepArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2082,20 +2082,20 @@ export namespace Prisma {
    */
   export type User$sleepArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
-    where?: sleepWhereInput
-    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
-    cursor?: sleepWhereUniqueInput
+    include?: SleepInclude<ExtArgs> | null
+    where?: SleepWhereInput
+    orderBy?: SleepOrderByWithRelationInput | SleepOrderByWithRelationInput[]
+    cursor?: SleepWhereUniqueInput
     take?: number
     skip?: number
     distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
@@ -2121,7 +2121,7 @@ export namespace Prisma {
 
 
   /**
-   * Model sleep
+   * Model Sleep
    */
 
   export type AggregateSleep = {
@@ -2209,37 +2209,37 @@ export namespace Prisma {
 
   export type SleepAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which sleep to aggregate.
+     * Filter which Sleep to aggregate.
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of sleeps to fetch.
+     * Determine the order of Sleeps to fetch.
      */
-    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
+    orderBy?: SleepOrderByWithRelationInput | SleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: sleepWhereUniqueInput
+    cursor?: SleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` sleeps from the position of the cursor.
+     * Take `±n` Sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` sleeps.
+     * Skip the first `n` Sleeps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned sleeps
+     * Count returned Sleeps
     **/
     _count?: true | SleepCountAggregateInputType
     /**
@@ -2279,11 +2279,11 @@ export namespace Prisma {
 
 
 
-  export type sleepGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: sleepWhereInput
-    orderBy?: sleepOrderByWithAggregationInput | sleepOrderByWithAggregationInput[]
+  export type SleepGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: SleepWhereInput
+    orderBy?: SleepOrderByWithAggregationInput | SleepOrderByWithAggregationInput[]
     by: SleepScalarFieldEnum[] | SleepScalarFieldEnum
-    having?: sleepScalarWhereWithAggregatesInput
+    having?: SleepScalarWhereWithAggregatesInput
     take?: number
     skip?: number
     _count?: SleepCountAggregateInputType | true
@@ -2306,7 +2306,7 @@ export namespace Prisma {
     _max: SleepMaxAggregateOutputType | null
   }
 
-  type GetSleepGroupByPayload<T extends sleepGroupByArgs> = Prisma.PrismaPromise<
+  type GetSleepGroupByPayload<T extends SleepGroupByArgs> = Prisma.PrismaPromise<
     Array<
       PickEnumerable<SleepGroupByOutputType, T['by']> &
         {
@@ -2320,7 +2320,7 @@ export namespace Prisma {
     >
 
 
-  export type sleepSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type SleepSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     start?: boolean
     end?: boolean
@@ -2329,7 +2329,7 @@ export namespace Prisma {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["sleep"]>
 
-  export type sleepSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type SleepSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     start?: boolean
     end?: boolean
@@ -2338,7 +2338,7 @@ export namespace Prisma {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["sleep"]>
 
-  export type sleepSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type SleepSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     start?: boolean
     end?: boolean
@@ -2347,7 +2347,7 @@ export namespace Prisma {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["sleep"]>
 
-  export type sleepSelectScalar = {
+  export type SleepSelectScalar = {
     id?: boolean
     start?: boolean
     end?: boolean
@@ -2355,19 +2355,19 @@ export namespace Prisma {
     userId?: boolean
   }
 
-  export type sleepOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "start" | "end" | "duration" | "userId", ExtArgs["result"]["sleep"]>
-  export type sleepInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "start" | "end" | "duration" | "userId", ExtArgs["result"]["sleep"]>
+  export type SleepInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
-  export type sleepIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
-  export type sleepIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
 
-  export type $sleepPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "sleep"
+  export type $SleepPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Sleep"
     objects: {
       user: Prisma.$UserPayload<ExtArgs>
     }
@@ -2381,18 +2381,18 @@ export namespace Prisma {
     composites: {}
   }
 
-  type sleepGetPayload<S extends boolean | null | undefined | sleepDefaultArgs> = $Result.GetResult<Prisma.$sleepPayload, S>
+  type SleepGetPayload<S extends boolean | null | undefined | SleepDefaultArgs> = $Result.GetResult<Prisma.$SleepPayload, S>
 
-  type sleepCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<sleepFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+  type SleepCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<SleepFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
       select?: SleepCountAggregateInputType | true
     }
 
-  export interface sleepDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['sleep'], meta: { name: 'sleep' } }
+  export interface SleepDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Sleep'], meta: { name: 'Sleep' } }
     /**
      * Find zero or one Sleep that matches the filter.
-     * @param {sleepFindUniqueArgs} args - Arguments to find a Sleep
+     * @param {SleepFindUniqueArgs} args - Arguments to find a Sleep
      * @example
      * // Get one Sleep
      * const sleep = await prisma.sleep.findUnique({
@@ -2401,12 +2401,12 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUnique<T extends sleepFindUniqueArgs>(args: SelectSubset<T, sleepFindUniqueArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends SleepFindUniqueArgs>(args: SelectSubset<T, SleepFindUniqueArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find one Sleep that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {sleepFindUniqueOrThrowArgs} args - Arguments to find a Sleep
+     * @param {SleepFindUniqueOrThrowArgs} args - Arguments to find a Sleep
      * @example
      * // Get one Sleep
      * const sleep = await prisma.sleep.findUniqueOrThrow({
@@ -2415,13 +2415,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findUniqueOrThrow<T extends sleepFindUniqueOrThrowArgs>(args: SelectSubset<T, sleepFindUniqueOrThrowArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends SleepFindUniqueOrThrowArgs>(args: SelectSubset<T, SleepFindUniqueOrThrowArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Sleep that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {sleepFindFirstArgs} args - Arguments to find a Sleep
+     * @param {SleepFindFirstArgs} args - Arguments to find a Sleep
      * @example
      * // Get one Sleep
      * const sleep = await prisma.sleep.findFirst({
@@ -2430,14 +2430,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirst<T extends sleepFindFirstArgs>(args?: SelectSubset<T, sleepFindFirstArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends SleepFindFirstArgs>(args?: SelectSubset<T, SleepFindFirstArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find the first Sleep that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {sleepFindFirstOrThrowArgs} args - Arguments to find a Sleep
+     * @param {SleepFindFirstOrThrowArgs} args - Arguments to find a Sleep
      * @example
      * // Get one Sleep
      * const sleep = await prisma.sleep.findFirstOrThrow({
@@ -2446,13 +2446,13 @@ export namespace Prisma {
      *   }
      * })
      */
-    findFirstOrThrow<T extends sleepFindFirstOrThrowArgs>(args?: SelectSubset<T, sleepFindFirstOrThrowArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends SleepFindFirstOrThrowArgs>(args?: SelectSubset<T, SleepFindFirstOrThrowArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Sleeps that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {sleepFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {SleepFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Sleeps
      * const sleeps = await prisma.sleep.findMany()
@@ -2464,11 +2464,11 @@ export namespace Prisma {
      * const sleepWithIdOnly = await prisma.sleep.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends sleepFindManyArgs>(args?: SelectSubset<T, sleepFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends SleepFindManyArgs>(args?: SelectSubset<T, SleepFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
      * Create a Sleep.
-     * @param {sleepCreateArgs} args - Arguments to create a Sleep.
+     * @param {SleepCreateArgs} args - Arguments to create a Sleep.
      * @example
      * // Create one Sleep
      * const Sleep = await prisma.sleep.create({
@@ -2478,11 +2478,11 @@ export namespace Prisma {
      * })
      * 
      */
-    create<T extends sleepCreateArgs>(args: SelectSubset<T, sleepCreateArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends SleepCreateArgs>(args: SelectSubset<T, SleepCreateArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Sleeps.
-     * @param {sleepCreateManyArgs} args - Arguments to create many Sleeps.
+     * @param {SleepCreateManyArgs} args - Arguments to create many Sleeps.
      * @example
      * // Create many Sleeps
      * const sleep = await prisma.sleep.createMany({
@@ -2492,11 +2492,11 @@ export namespace Prisma {
      * })
      *     
      */
-    createMany<T extends sleepCreateManyArgs>(args?: SelectSubset<T, sleepCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends SleepCreateManyArgs>(args?: SelectSubset<T, SleepCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Sleeps and returns the data saved in the database.
-     * @param {sleepCreateManyAndReturnArgs} args - Arguments to create many Sleeps.
+     * @param {SleepCreateManyAndReturnArgs} args - Arguments to create many Sleeps.
      * @example
      * // Create many Sleeps
      * const sleep = await prisma.sleep.createManyAndReturn({
@@ -2516,11 +2516,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends sleepCreateManyAndReturnArgs>(args?: SelectSubset<T, sleepCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends SleepCreateManyAndReturnArgs>(args?: SelectSubset<T, SleepCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Delete a Sleep.
-     * @param {sleepDeleteArgs} args - Arguments to delete one Sleep.
+     * @param {SleepDeleteArgs} args - Arguments to delete one Sleep.
      * @example
      * // Delete one Sleep
      * const Sleep = await prisma.sleep.delete({
@@ -2530,11 +2530,11 @@ export namespace Prisma {
      * })
      * 
      */
-    delete<T extends sleepDeleteArgs>(args: SelectSubset<T, sleepDeleteArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends SleepDeleteArgs>(args: SelectSubset<T, SleepDeleteArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Update one Sleep.
-     * @param {sleepUpdateArgs} args - Arguments to update one Sleep.
+     * @param {SleepUpdateArgs} args - Arguments to update one Sleep.
      * @example
      * // Update one Sleep
      * const sleep = await prisma.sleep.update({
@@ -2547,11 +2547,11 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends sleepUpdateArgs>(args: SelectSubset<T, sleepUpdateArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends SleepUpdateArgs>(args: SelectSubset<T, SleepUpdateArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Sleeps.
-     * @param {sleepDeleteManyArgs} args - Arguments to filter Sleeps to delete.
+     * @param {SleepDeleteManyArgs} args - Arguments to filter Sleeps to delete.
      * @example
      * // Delete a few Sleeps
      * const { count } = await prisma.sleep.deleteMany({
@@ -2561,13 +2561,13 @@ export namespace Prisma {
      * })
      * 
      */
-    deleteMany<T extends sleepDeleteManyArgs>(args?: SelectSubset<T, sleepDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends SleepDeleteManyArgs>(args?: SelectSubset<T, SleepDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Sleeps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {sleepUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {SleepUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Sleeps
      * const sleep = await prisma.sleep.updateMany({
@@ -2580,11 +2580,11 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends sleepUpdateManyArgs>(args: SelectSubset<T, sleepUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends SleepUpdateManyArgs>(args: SelectSubset<T, SleepUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Sleeps and returns the data updated in the database.
-     * @param {sleepUpdateManyAndReturnArgs} args - Arguments to update many Sleeps.
+     * @param {SleepUpdateManyAndReturnArgs} args - Arguments to update many Sleeps.
      * @example
      * // Update many Sleeps
      * const sleep = await prisma.sleep.updateManyAndReturn({
@@ -2610,11 +2610,11 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends sleepUpdateManyAndReturnArgs>(args: SelectSubset<T, sleepUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends SleepUpdateManyAndReturnArgs>(args: SelectSubset<T, SleepUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Sleep.
-     * @param {sleepUpsertArgs} args - Arguments to update or create a Sleep.
+     * @param {SleepUpsertArgs} args - Arguments to update or create a Sleep.
      * @example
      * // Update or create a Sleep
      * const sleep = await prisma.sleep.upsert({
@@ -2629,14 +2629,14 @@ export namespace Prisma {
      *   }
      * })
      */
-    upsert<T extends sleepUpsertArgs>(args: SelectSubset<T, sleepUpsertArgs<ExtArgs>>): Prisma__sleepClient<$Result.GetResult<Prisma.$sleepPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends SleepUpsertArgs>(args: SelectSubset<T, SleepUpsertArgs<ExtArgs>>): Prisma__SleepClient<$Result.GetResult<Prisma.$SleepPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Sleeps.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {sleepCountArgs} args - Arguments to filter Sleeps to count.
+     * @param {SleepCountArgs} args - Arguments to filter Sleeps to count.
      * @example
      * // Count the number of Sleeps
      * const count = await prisma.sleep.count({
@@ -2645,8 +2645,8 @@ export namespace Prisma {
      *   }
      * })
     **/
-    count<T extends sleepCountArgs>(
-      args?: Subset<T, sleepCountArgs>,
+    count<T extends SleepCountArgs>(
+      args?: Subset<T, SleepCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
@@ -2685,7 +2685,7 @@ export namespace Prisma {
      * Group by Sleep.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {sleepGroupByArgs} args - Group by arguments.
+     * @param {SleepGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2700,14 +2700,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends sleepGroupByArgs,
+      T extends SleepGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: sleepGroupByArgs['orderBy'] }
-        : { orderBy?: sleepGroupByArgs['orderBy'] },
+        ? { orderBy: SleepGroupByArgs['orderBy'] }
+        : { orderBy?: SleepGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2756,20 +2756,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, sleepGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSleepGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, SleepGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetSleepGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the sleep model
+   * Fields of the Sleep model
    */
-  readonly fields: sleepFieldRefs;
+  readonly fields: SleepFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for sleep.
+   * The delegate class that acts as a "Promise-like" for Sleep.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__sleepClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__SleepClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     user<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
@@ -2798,425 +2798,425 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the sleep model
+   * Fields of the Sleep model
    */
-  interface sleepFieldRefs {
-    readonly id: FieldRef<"sleep", 'Int'>
-    readonly start: FieldRef<"sleep", 'DateTime'>
-    readonly end: FieldRef<"sleep", 'DateTime'>
-    readonly duration: FieldRef<"sleep", 'Int'>
-    readonly userId: FieldRef<"sleep", 'Int'>
+  interface SleepFieldRefs {
+    readonly id: FieldRef<"Sleep", 'Int'>
+    readonly start: FieldRef<"Sleep", 'DateTime'>
+    readonly end: FieldRef<"Sleep", 'DateTime'>
+    readonly duration: FieldRef<"Sleep", 'Int'>
+    readonly userId: FieldRef<"Sleep", 'Int'>
   }
     
 
   // Custom InputTypes
   /**
-   * sleep findUnique
+   * Sleep findUnique
    */
-  export type sleepFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * Filter, which sleep to fetch.
+     * Filter, which Sleep to fetch.
      */
-    where: sleepWhereUniqueInput
+    where: SleepWhereUniqueInput
   }
 
   /**
-   * sleep findUniqueOrThrow
+   * Sleep findUniqueOrThrow
    */
-  export type sleepFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * Filter, which sleep to fetch.
+     * Filter, which Sleep to fetch.
      */
-    where: sleepWhereUniqueInput
+    where: SleepWhereUniqueInput
   }
 
   /**
-   * sleep findFirst
+   * Sleep findFirst
    */
-  export type sleepFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * Filter, which sleep to fetch.
+     * Filter, which Sleep to fetch.
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of sleeps to fetch.
+     * Determine the order of Sleeps to fetch.
      */
-    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
+    orderBy?: SleepOrderByWithRelationInput | SleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for sleeps.
+     * Sets the position for searching for Sleeps.
      */
-    cursor?: sleepWhereUniqueInput
+    cursor?: SleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` sleeps from the position of the cursor.
+     * Take `±n` Sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` sleeps.
+     * Skip the first `n` Sleeps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of sleeps.
+     * Filter by unique combinations of Sleeps.
      */
     distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
-   * sleep findFirstOrThrow
+   * Sleep findFirstOrThrow
    */
-  export type sleepFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * Filter, which sleep to fetch.
+     * Filter, which Sleep to fetch.
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of sleeps to fetch.
+     * Determine the order of Sleeps to fetch.
      */
-    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
+    orderBy?: SleepOrderByWithRelationInput | SleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for sleeps.
+     * Sets the position for searching for Sleeps.
      */
-    cursor?: sleepWhereUniqueInput
+    cursor?: SleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` sleeps from the position of the cursor.
+     * Take `±n` Sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` sleeps.
+     * Skip the first `n` Sleeps.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of sleeps.
+     * Filter by unique combinations of Sleeps.
      */
     distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
-   * sleep findMany
+   * Sleep findMany
    */
-  export type sleepFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * Filter, which sleeps to fetch.
+     * Filter, which Sleeps to fetch.
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of sleeps to fetch.
+     * Determine the order of Sleeps to fetch.
      */
-    orderBy?: sleepOrderByWithRelationInput | sleepOrderByWithRelationInput[]
+    orderBy?: SleepOrderByWithRelationInput | SleepOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing sleeps.
+     * Sets the position for listing Sleeps.
      */
-    cursor?: sleepWhereUniqueInput
+    cursor?: SleepWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` sleeps from the position of the cursor.
+     * Take `±n` Sleeps from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` sleeps.
+     * Skip the first `n` Sleeps.
      */
     skip?: number
     distinct?: SleepScalarFieldEnum | SleepScalarFieldEnum[]
   }
 
   /**
-   * sleep create
+   * Sleep create
    */
-  export type sleepCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * The data needed to create a sleep.
+     * The data needed to create a Sleep.
      */
-    data: XOR<sleepCreateInput, sleepUncheckedCreateInput>
+    data: XOR<SleepCreateInput, SleepUncheckedCreateInput>
   }
 
   /**
-   * sleep createMany
+   * Sleep createMany
    */
-  export type sleepCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many sleeps.
+     * The data used to create many Sleeps.
      */
-    data: sleepCreateManyInput | sleepCreateManyInput[]
+    data: SleepCreateManyInput | SleepCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * sleep createManyAndReturn
+   * Sleep createManyAndReturn
    */
-  export type sleepCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelectCreateManyAndReturn<ExtArgs> | null
+    select?: SleepSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
-     * The data used to create many sleeps.
+     * The data used to create many Sleeps.
      */
-    data: sleepCreateManyInput | sleepCreateManyInput[]
+    data: SleepCreateManyInput | SleepCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: SleepIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * sleep update
+   * Sleep update
    */
-  export type sleepUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * The data needed to update a sleep.
+     * The data needed to update a Sleep.
      */
-    data: XOR<sleepUpdateInput, sleepUncheckedUpdateInput>
+    data: XOR<SleepUpdateInput, SleepUncheckedUpdateInput>
     /**
-     * Choose, which sleep to update.
+     * Choose, which Sleep to update.
      */
-    where: sleepWhereUniqueInput
+    where: SleepWhereUniqueInput
   }
 
   /**
-   * sleep updateMany
+   * Sleep updateMany
    */
-  export type sleepUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update sleeps.
+     * The data used to update Sleeps.
      */
-    data: XOR<sleepUpdateManyMutationInput, sleepUncheckedUpdateManyInput>
+    data: XOR<SleepUpdateManyMutationInput, SleepUncheckedUpdateManyInput>
     /**
-     * Filter which sleeps to update
+     * Filter which Sleeps to update
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
-     * Limit how many sleeps to update.
+     * Limit how many Sleeps to update.
      */
     limit?: number
   }
 
   /**
-   * sleep updateManyAndReturn
+   * Sleep updateManyAndReturn
    */
-  export type sleepUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: SleepSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
-     * The data used to update sleeps.
+     * The data used to update Sleeps.
      */
-    data: XOR<sleepUpdateManyMutationInput, sleepUncheckedUpdateManyInput>
+    data: XOR<SleepUpdateManyMutationInput, SleepUncheckedUpdateManyInput>
     /**
-     * Filter which sleeps to update
+     * Filter which Sleeps to update
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
-     * Limit how many sleeps to update.
+     * Limit how many Sleeps to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: SleepIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * sleep upsert
+   * Sleep upsert
    */
-  export type sleepUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * The filter to search for the sleep to update in case it exists.
+     * The filter to search for the Sleep to update in case it exists.
      */
-    where: sleepWhereUniqueInput
+    where: SleepWhereUniqueInput
     /**
-     * In case the sleep found by the `where` argument doesn't exist, create a new sleep with this data.
+     * In case the Sleep found by the `where` argument doesn't exist, create a new Sleep with this data.
      */
-    create: XOR<sleepCreateInput, sleepUncheckedCreateInput>
+    create: XOR<SleepCreateInput, SleepUncheckedCreateInput>
     /**
-     * In case the sleep was found with the provided `where` argument, update it with this data.
+     * In case the Sleep was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<sleepUpdateInput, sleepUncheckedUpdateInput>
+    update: XOR<SleepUpdateInput, SleepUncheckedUpdateInput>
   }
 
   /**
-   * sleep delete
+   * Sleep delete
    */
-  export type sleepDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
     /**
-     * Filter which sleep to delete.
+     * Filter which Sleep to delete.
      */
-    where: sleepWhereUniqueInput
+    where: SleepWhereUniqueInput
   }
 
   /**
-   * sleep deleteMany
+   * Sleep deleteMany
    */
-  export type sleepDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which sleeps to delete
+     * Filter which Sleeps to delete
      */
-    where?: sleepWhereInput
+    where?: SleepWhereInput
     /**
-     * Limit how many sleeps to delete.
+     * Limit how many Sleeps to delete.
      */
     limit?: number
   }
 
   /**
-   * sleep without action
+   * Sleep without action
    */
-  export type sleepDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type SleepDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the sleep
+     * Select specific fields to fetch from the Sleep
      */
-    select?: sleepSelect<ExtArgs> | null
+    select?: SleepSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the sleep
+     * Omit specific fields from the Sleep
      */
-    omit?: sleepOmit<ExtArgs> | null
+    omit?: SleepOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: sleepInclude<ExtArgs> | null
+    include?: SleepInclude<ExtArgs> | null
   }
 
 
@@ -3360,7 +3360,7 @@ export namespace Prisma {
     birthDate?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    sleep?: sleepOrderByRelationAggregateInput
+    sleep?: SleepOrderByRelationAggregateInput
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -3405,19 +3405,19 @@ export namespace Prisma {
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
 
-  export type sleepWhereInput = {
-    AND?: sleepWhereInput | sleepWhereInput[]
-    OR?: sleepWhereInput[]
-    NOT?: sleepWhereInput | sleepWhereInput[]
-    id?: IntFilter<"sleep"> | number
-    start?: DateTimeFilter<"sleep"> | Date | string
-    end?: DateTimeFilter<"sleep"> | Date | string
-    duration?: IntFilter<"sleep"> | number
-    userId?: IntFilter<"sleep"> | number
+  export type SleepWhereInput = {
+    AND?: SleepWhereInput | SleepWhereInput[]
+    OR?: SleepWhereInput[]
+    NOT?: SleepWhereInput | SleepWhereInput[]
+    id?: IntFilter<"Sleep"> | number
+    start?: DateTimeFilter<"Sleep"> | Date | string
+    end?: DateTimeFilter<"Sleep"> | Date | string
+    duration?: IntFilter<"Sleep"> | number
+    userId?: IntFilter<"Sleep"> | number
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }
 
-  export type sleepOrderByWithRelationInput = {
+  export type SleepOrderByWithRelationInput = {
     id?: SortOrder
     start?: SortOrder
     end?: SortOrder
@@ -3426,40 +3426,40 @@ export namespace Prisma {
     user?: UserOrderByWithRelationInput
   }
 
-  export type sleepWhereUniqueInput = Prisma.AtLeast<{
+  export type SleepWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: sleepWhereInput | sleepWhereInput[]
-    OR?: sleepWhereInput[]
-    NOT?: sleepWhereInput | sleepWhereInput[]
-    start?: DateTimeFilter<"sleep"> | Date | string
-    end?: DateTimeFilter<"sleep"> | Date | string
-    duration?: IntFilter<"sleep"> | number
-    userId?: IntFilter<"sleep"> | number
+    AND?: SleepWhereInput | SleepWhereInput[]
+    OR?: SleepWhereInput[]
+    NOT?: SleepWhereInput | SleepWhereInput[]
+    start?: DateTimeFilter<"Sleep"> | Date | string
+    end?: DateTimeFilter<"Sleep"> | Date | string
+    duration?: IntFilter<"Sleep"> | number
+    userId?: IntFilter<"Sleep"> | number
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
   }, "id">
 
-  export type sleepOrderByWithAggregationInput = {
+  export type SleepOrderByWithAggregationInput = {
     id?: SortOrder
     start?: SortOrder
     end?: SortOrder
     duration?: SortOrder
     userId?: SortOrder
-    _count?: sleepCountOrderByAggregateInput
-    _avg?: sleepAvgOrderByAggregateInput
-    _max?: sleepMaxOrderByAggregateInput
-    _min?: sleepMinOrderByAggregateInput
-    _sum?: sleepSumOrderByAggregateInput
+    _count?: SleepCountOrderByAggregateInput
+    _avg?: SleepAvgOrderByAggregateInput
+    _max?: SleepMaxOrderByAggregateInput
+    _min?: SleepMinOrderByAggregateInput
+    _sum?: SleepSumOrderByAggregateInput
   }
 
-  export type sleepScalarWhereWithAggregatesInput = {
-    AND?: sleepScalarWhereWithAggregatesInput | sleepScalarWhereWithAggregatesInput[]
-    OR?: sleepScalarWhereWithAggregatesInput[]
-    NOT?: sleepScalarWhereWithAggregatesInput | sleepScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"sleep"> | number
-    start?: DateTimeWithAggregatesFilter<"sleep"> | Date | string
-    end?: DateTimeWithAggregatesFilter<"sleep"> | Date | string
-    duration?: IntWithAggregatesFilter<"sleep"> | number
-    userId?: IntWithAggregatesFilter<"sleep"> | number
+  export type SleepScalarWhereWithAggregatesInput = {
+    AND?: SleepScalarWhereWithAggregatesInput | SleepScalarWhereWithAggregatesInput[]
+    OR?: SleepScalarWhereWithAggregatesInput[]
+    NOT?: SleepScalarWhereWithAggregatesInput | SleepScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Sleep"> | number
+    start?: DateTimeWithAggregatesFilter<"Sleep"> | Date | string
+    end?: DateTimeWithAggregatesFilter<"Sleep"> | Date | string
+    duration?: IntWithAggregatesFilter<"Sleep"> | number
+    userId?: IntWithAggregatesFilter<"Sleep"> | number
   }
 
   export type UserCreateInput = {
@@ -3469,7 +3469,7 @@ export namespace Prisma {
     birthDate: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
-    sleep?: sleepCreateNestedManyWithoutUserInput
+    sleep?: SleepCreateNestedManyWithoutUserInput
   }
 
   export type UserUncheckedCreateInput = {
@@ -3480,7 +3480,7 @@ export namespace Prisma {
     birthDate: Date | string
     createdAt?: Date | string
     updatedAt?: Date | string
-    sleep?: sleepUncheckedCreateNestedManyWithoutUserInput
+    sleep?: SleepUncheckedCreateNestedManyWithoutUserInput
   }
 
   export type UserUpdateInput = {
@@ -3490,7 +3490,7 @@ export namespace Prisma {
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sleep?: sleepUpdateManyWithoutUserNestedInput
+    sleep?: SleepUpdateManyWithoutUserNestedInput
   }
 
   export type UserUncheckedUpdateInput = {
@@ -3501,7 +3501,7 @@ export namespace Prisma {
     birthDate?: DateTimeFieldUpdateOperationsInput | Date | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    sleep?: sleepUncheckedUpdateManyWithoutUserNestedInput
+    sleep?: SleepUncheckedUpdateManyWithoutUserNestedInput
   }
 
   export type UserCreateManyInput = {
@@ -3533,14 +3533,14 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type sleepCreateInput = {
+  export type SleepCreateInput = {
     start: Date | string
     end: Date | string
     duration: number
     user: UserCreateNestedOneWithoutSleepInput
   }
 
-  export type sleepUncheckedCreateInput = {
+  export type SleepUncheckedCreateInput = {
     id?: number
     start: Date | string
     end: Date | string
@@ -3548,14 +3548,14 @@ export namespace Prisma {
     userId: number
   }
 
-  export type sleepUpdateInput = {
+  export type SleepUpdateInput = {
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
     user?: UserUpdateOneRequiredWithoutSleepNestedInput
   }
 
-  export type sleepUncheckedUpdateInput = {
+  export type SleepUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3563,7 +3563,7 @@ export namespace Prisma {
     userId?: IntFieldUpdateOperationsInput | number
   }
 
-  export type sleepCreateManyInput = {
+  export type SleepCreateManyInput = {
     id?: number
     start: Date | string
     end: Date | string
@@ -3571,13 +3571,13 @@ export namespace Prisma {
     userId: number
   }
 
-  export type sleepUpdateManyMutationInput = {
+  export type SleepUpdateManyMutationInput = {
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
   }
 
-  export type sleepUncheckedUpdateManyInput = {
+  export type SleepUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -3623,12 +3623,12 @@ export namespace Prisma {
   }
 
   export type SleepListRelationFilter = {
-    every?: sleepWhereInput
-    some?: sleepWhereInput
-    none?: sleepWhereInput
+    every?: SleepWhereInput
+    some?: SleepWhereInput
+    none?: SleepWhereInput
   }
 
-  export type sleepOrderByRelationAggregateInput = {
+  export type SleepOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
@@ -3723,7 +3723,7 @@ export namespace Prisma {
     isNot?: UserWhereInput
   }
 
-  export type sleepCountOrderByAggregateInput = {
+  export type SleepCountOrderByAggregateInput = {
     id?: SortOrder
     start?: SortOrder
     end?: SortOrder
@@ -3731,21 +3731,13 @@ export namespace Prisma {
     userId?: SortOrder
   }
 
-  export type sleepAvgOrderByAggregateInput = {
+  export type SleepAvgOrderByAggregateInput = {
     id?: SortOrder
     duration?: SortOrder
     userId?: SortOrder
   }
 
-  export type sleepMaxOrderByAggregateInput = {
-    id?: SortOrder
-    start?: SortOrder
-    end?: SortOrder
-    duration?: SortOrder
-    userId?: SortOrder
-  }
-
-  export type sleepMinOrderByAggregateInput = {
+  export type SleepMaxOrderByAggregateInput = {
     id?: SortOrder
     start?: SortOrder
     end?: SortOrder
@@ -3753,24 +3745,32 @@ export namespace Prisma {
     userId?: SortOrder
   }
 
-  export type sleepSumOrderByAggregateInput = {
+  export type SleepMinOrderByAggregateInput = {
+    id?: SortOrder
+    start?: SortOrder
+    end?: SortOrder
+    duration?: SortOrder
+    userId?: SortOrder
+  }
+
+  export type SleepSumOrderByAggregateInput = {
     id?: SortOrder
     duration?: SortOrder
     userId?: SortOrder
   }
 
-  export type sleepCreateNestedManyWithoutUserInput = {
-    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
-    createMany?: sleepCreateManyUserInputEnvelope
-    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+  export type SleepCreateNestedManyWithoutUserInput = {
+    create?: XOR<SleepCreateWithoutUserInput, SleepUncheckedCreateWithoutUserInput> | SleepCreateWithoutUserInput[] | SleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SleepCreateOrConnectWithoutUserInput | SleepCreateOrConnectWithoutUserInput[]
+    createMany?: SleepCreateManyUserInputEnvelope
+    connect?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
   }
 
-  export type sleepUncheckedCreateNestedManyWithoutUserInput = {
-    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
-    createMany?: sleepCreateManyUserInputEnvelope
-    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
+  export type SleepUncheckedCreateNestedManyWithoutUserInput = {
+    create?: XOR<SleepCreateWithoutUserInput, SleepUncheckedCreateWithoutUserInput> | SleepCreateWithoutUserInput[] | SleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SleepCreateOrConnectWithoutUserInput | SleepCreateOrConnectWithoutUserInput[]
+    createMany?: SleepCreateManyUserInputEnvelope
+    connect?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -3781,18 +3781,18 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type sleepUpdateManyWithoutUserNestedInput = {
-    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
-    upsert?: sleepUpsertWithWhereUniqueWithoutUserInput | sleepUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: sleepCreateManyUserInputEnvelope
-    set?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    disconnect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    delete?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    update?: sleepUpdateWithWhereUniqueWithoutUserInput | sleepUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: sleepUpdateManyWithWhereWithoutUserInput | sleepUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: sleepScalarWhereInput | sleepScalarWhereInput[]
+  export type SleepUpdateManyWithoutUserNestedInput = {
+    create?: XOR<SleepCreateWithoutUserInput, SleepUncheckedCreateWithoutUserInput> | SleepCreateWithoutUserInput[] | SleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SleepCreateOrConnectWithoutUserInput | SleepCreateOrConnectWithoutUserInput[]
+    upsert?: SleepUpsertWithWhereUniqueWithoutUserInput | SleepUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: SleepCreateManyUserInputEnvelope
+    set?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    disconnect?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    delete?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    connect?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    update?: SleepUpdateWithWhereUniqueWithoutUserInput | SleepUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: SleepUpdateManyWithWhereWithoutUserInput | SleepUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: SleepScalarWhereInput | SleepScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -3803,18 +3803,18 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type sleepUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput> | sleepCreateWithoutUserInput[] | sleepUncheckedCreateWithoutUserInput[]
-    connectOrCreate?: sleepCreateOrConnectWithoutUserInput | sleepCreateOrConnectWithoutUserInput[]
-    upsert?: sleepUpsertWithWhereUniqueWithoutUserInput | sleepUpsertWithWhereUniqueWithoutUserInput[]
-    createMany?: sleepCreateManyUserInputEnvelope
-    set?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    disconnect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    delete?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    connect?: sleepWhereUniqueInput | sleepWhereUniqueInput[]
-    update?: sleepUpdateWithWhereUniqueWithoutUserInput | sleepUpdateWithWhereUniqueWithoutUserInput[]
-    updateMany?: sleepUpdateManyWithWhereWithoutUserInput | sleepUpdateManyWithWhereWithoutUserInput[]
-    deleteMany?: sleepScalarWhereInput | sleepScalarWhereInput[]
+  export type SleepUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: XOR<SleepCreateWithoutUserInput, SleepUncheckedCreateWithoutUserInput> | SleepCreateWithoutUserInput[] | SleepUncheckedCreateWithoutUserInput[]
+    connectOrCreate?: SleepCreateOrConnectWithoutUserInput | SleepCreateOrConnectWithoutUserInput[]
+    upsert?: SleepUpsertWithWhereUniqueWithoutUserInput | SleepUpsertWithWhereUniqueWithoutUserInput[]
+    createMany?: SleepCreateManyUserInputEnvelope
+    set?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    disconnect?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    delete?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    connect?: SleepWhereUniqueInput | SleepWhereUniqueInput[]
+    update?: SleepUpdateWithWhereUniqueWithoutUserInput | SleepUpdateWithWhereUniqueWithoutUserInput[]
+    updateMany?: SleepUpdateManyWithWhereWithoutUserInput | SleepUpdateManyWithWhereWithoutUserInput[]
+    deleteMany?: SleepScalarWhereInput | SleepScalarWhereInput[]
   }
 
   export type UserCreateNestedOneWithoutSleepInput = {
@@ -3925,54 +3925,54 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type sleepCreateWithoutUserInput = {
+  export type SleepCreateWithoutUserInput = {
     start: Date | string
     end: Date | string
     duration: number
   }
 
-  export type sleepUncheckedCreateWithoutUserInput = {
+  export type SleepUncheckedCreateWithoutUserInput = {
     id?: number
     start: Date | string
     end: Date | string
     duration: number
   }
 
-  export type sleepCreateOrConnectWithoutUserInput = {
-    where: sleepWhereUniqueInput
-    create: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput>
+  export type SleepCreateOrConnectWithoutUserInput = {
+    where: SleepWhereUniqueInput
+    create: XOR<SleepCreateWithoutUserInput, SleepUncheckedCreateWithoutUserInput>
   }
 
-  export type sleepCreateManyUserInputEnvelope = {
-    data: sleepCreateManyUserInput | sleepCreateManyUserInput[]
+  export type SleepCreateManyUserInputEnvelope = {
+    data: SleepCreateManyUserInput | SleepCreateManyUserInput[]
     skipDuplicates?: boolean
   }
 
-  export type sleepUpsertWithWhereUniqueWithoutUserInput = {
-    where: sleepWhereUniqueInput
-    update: XOR<sleepUpdateWithoutUserInput, sleepUncheckedUpdateWithoutUserInput>
-    create: XOR<sleepCreateWithoutUserInput, sleepUncheckedCreateWithoutUserInput>
+  export type SleepUpsertWithWhereUniqueWithoutUserInput = {
+    where: SleepWhereUniqueInput
+    update: XOR<SleepUpdateWithoutUserInput, SleepUncheckedUpdateWithoutUserInput>
+    create: XOR<SleepCreateWithoutUserInput, SleepUncheckedCreateWithoutUserInput>
   }
 
-  export type sleepUpdateWithWhereUniqueWithoutUserInput = {
-    where: sleepWhereUniqueInput
-    data: XOR<sleepUpdateWithoutUserInput, sleepUncheckedUpdateWithoutUserInput>
+  export type SleepUpdateWithWhereUniqueWithoutUserInput = {
+    where: SleepWhereUniqueInput
+    data: XOR<SleepUpdateWithoutUserInput, SleepUncheckedUpdateWithoutUserInput>
   }
 
-  export type sleepUpdateManyWithWhereWithoutUserInput = {
-    where: sleepScalarWhereInput
-    data: XOR<sleepUpdateManyMutationInput, sleepUncheckedUpdateManyWithoutUserInput>
+  export type SleepUpdateManyWithWhereWithoutUserInput = {
+    where: SleepScalarWhereInput
+    data: XOR<SleepUpdateManyMutationInput, SleepUncheckedUpdateManyWithoutUserInput>
   }
 
-  export type sleepScalarWhereInput = {
-    AND?: sleepScalarWhereInput | sleepScalarWhereInput[]
-    OR?: sleepScalarWhereInput[]
-    NOT?: sleepScalarWhereInput | sleepScalarWhereInput[]
-    id?: IntFilter<"sleep"> | number
-    start?: DateTimeFilter<"sleep"> | Date | string
-    end?: DateTimeFilter<"sleep"> | Date | string
-    duration?: IntFilter<"sleep"> | number
-    userId?: IntFilter<"sleep"> | number
+  export type SleepScalarWhereInput = {
+    AND?: SleepScalarWhereInput | SleepScalarWhereInput[]
+    OR?: SleepScalarWhereInput[]
+    NOT?: SleepScalarWhereInput | SleepScalarWhereInput[]
+    id?: IntFilter<"Sleep"> | number
+    start?: DateTimeFilter<"Sleep"> | Date | string
+    end?: DateTimeFilter<"Sleep"> | Date | string
+    duration?: IntFilter<"Sleep"> | number
+    userId?: IntFilter<"Sleep"> | number
   }
 
   export type UserCreateWithoutSleepInput = {
@@ -4029,27 +4029,27 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type sleepCreateManyUserInput = {
+  export type SleepCreateManyUserInput = {
     id?: number
     start: Date | string
     end: Date | string
     duration: number
   }
 
-  export type sleepUpdateWithoutUserInput = {
+  export type SleepUpdateWithoutUserInput = {
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
   }
 
-  export type sleepUncheckedUpdateWithoutUserInput = {
+  export type SleepUncheckedUpdateWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string
     duration?: IntFieldUpdateOperationsInput | number
   }
 
-  export type sleepUncheckedUpdateManyWithoutUserInput = {
+  export type SleepUncheckedUpdateManyWithoutUserInput = {
     id?: IntFieldUpdateOperationsInput | number
     start?: DateTimeFieldUpdateOperationsInput | Date | string
     end?: DateTimeFieldUpdateOperationsInput | Date | string

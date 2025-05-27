@@ -2,10 +2,14 @@
 import { Controller, Post, Body, Query, Get } from '@nestjs/common';
 import { User as UserModel } from 'generated/prisma';
 import { UsersService } from './user.service';
+import { AuthService } from '../auth/auth.service';
 
 @Controller('users')
 export class UserController {
-    constructor(private readonly userService: UsersService) {}
+    constructor(
+        private readonly userService: UsersService,
+        private readonly authService: AuthService,
+    ) {}
 
     @Post('create')
     async signupUser(
@@ -16,13 +20,20 @@ export class UserController {
             password: string;
             birthDate: Date;
         },
-    ): Promise<UserModel> {
-        return this.userService.createUser({
+    ): Promise<Omit<UserModel, 'password'>> {
+        const hashedPassword = await this.authService.hashPassword(
+            userData.password,
+        );
+        const user = await this.userService.createUser({
             email: userData.email,
             name: userData.name,
-            password: userData.password,
+            password: hashedPassword,
             birthDate: userData.birthDate,
         });
+        // Não retorna a senha
+        const { password, ...userWithoutPassword } = user;
+        void password;
+        return userWithoutPassword;
     }
 
     @Get('all')

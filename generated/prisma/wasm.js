@@ -148,7 +148,7 @@ exports.Prisma.QueryMode = {
 
 exports.Prisma.ModelName = {
   User: 'User',
-  sleep: 'sleep'
+  Sleep: 'Sleep'
 };
 
 /**

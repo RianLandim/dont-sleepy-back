@@ -24,11 +24,11 @@ model User {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  sleep sleep[]
+  sleep Sleep[]
 }
 
 // A ideia aqui é que sempre que o usuário dormir, registar uma dormida e vincular a ele. Assim teremos estatísticas.
-model sleep {
+model Sleep {
   id       Int      @id @default(autoincrement())
   start    DateTime
   end      DateTime
