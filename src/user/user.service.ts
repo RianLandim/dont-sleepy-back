@@ -54,6 +54,21 @@ export class UsersService {
         data: Prisma.UserUpdateInput;
     }): Promise<User> {
         const { where, data } = params;
+        if (data.birthDate !== undefined) {
+            if (
+                typeof data.birthDate === 'string' &&
+                /^\d{4}-\d{2}-\d{2}$/.test(data.birthDate.trim())
+            ) {
+                data.birthDate = new Date(data.birthDate + 'T00:00:00.000Z');
+            } else if (
+                typeof data.birthDate === 'string' &&
+                !/^\d{4}-\d{2}-\d{2}$/.test(data.birthDate.trim())
+            ) {
+                delete data.birthDate;
+            } else if (data.birthDate === '' || data.birthDate === null) {
+                delete data.birthDate;
+            }
+        }
         return this.prisma.user.update({
             data,
             where,

@@ -6,10 +6,12 @@ import {
     Get,
     Patch,
     Request,
+    UseGuards,
 } from '@nestjs/common';
 import { User as UserModel } from 'generated/prisma';
 import { UsersService } from './user.service';
 import { AuthService } from '../auth/auth.service';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('users')
 export class UserController {
@@ -68,6 +70,7 @@ export class UserController {
         });
     }
 
+    @UseGuards(JwtAuthGuard)
     @Patch('update')
     async updateUserInfo(
         @Request() req,
@@ -84,11 +87,23 @@ export class UserController {
             numero?: string;
         },
     ) {
-        const userId = req.user.userId;
+        const userId = Number(req.user.userId);
         // Não permite editar email e senha
         return this.userService.updateUser({
             where: { id: userId },
             data: updateData,
         });
+    }
+
+    @UseGuards(JwtAuthGuard)
+    @Get('me')
+    async getMe(@Request() req) {
+        const userId = Number(req.user.userId);
+        const user = await this.userService.user({ id: userId });
+        if (!user) return { message: 'Usuário não encontrado' };
+        // Não retorna a senha
+        const { password, ...userWithoutPassword } = user;
+        void password;
+        return userWithoutPassword;
     }
 }
