@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for dont-sleepy-back on 2025-06-13T12:20:21Z
+# fly.toml app configuration file generated for dont-sleepy-back on 2025-06-13T12:36:16Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -7,9 +7,6 @@ app = 'dont-sleepy-back'
 primary_region = 'gig'
 
 [build]
-
-[deploy]
-  release_command = 'npx prisma migrate deploy'
 
 [http_service]
   internal_port = 3000
